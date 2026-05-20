@@ -1,0 +1,44 @@
+---
+// Emits FAQPage JSON-LD by parsing the raw markdown body of the FAQ page.
+// Questions are H3 (### ...); the answer is the text until the next ### / ## / --- .
+interface Props { body: string; pageUrl: string; }
+const { body, pageUrl } = Astro.props;
+
+function clean(md: string): string {
+  return md
+    .replace(/\[([^\]]+)\]\([^)]*\)/g, '$1')   // links -> text
+    .replace(/[*_`]/g, '')                       // emphasis/code marks
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+const lines = body.split('\n');
+type QA = { name: string; text: string };
+const qas: QA[] = [];
+let current: QA | null = null;
+for (const raw of lines) {
+  const line = raw.trimEnd();
+  if (line.startsWith('### ')) {
+    if (current && current.text.trim()) qas.push({ name: current.name, text: clean(current.text) });
+    current = { name: clean(line.slice(4)), text: '' };
+  } else if (line.startsWith('## ') || line.startsWith('# ') || line.trim() === '---') {
+    if (current && current.text.trim()) qas.push({ name: current.name, text: clean(current.text) });
+    current = null;
+  } else if (current) {
+    current.text += ' ' + line;
+  }
+}
+if (current && current.text.trim()) qas.push({ name: current.name, text: clean(current.text) });
+
+const faqLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  '@id': `${pageUrl}#faqpage`,
+  mainEntity: qas.map((q) => ({
+    '@type': 'Question',
+    name: q.name,
+    acceptedAnswer: { '@type': 'Answer', text: q.text },
+  })),
+};
+---
+{qas.length > 0 && <script type="application/ld+json" set:html={JSON.stringify(faqLd)} />}

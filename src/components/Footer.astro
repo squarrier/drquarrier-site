@@ -1,0 +1,41 @@
+---
+import { SITE, MAIN_NAV, FOOTER_NAV } from '../consts';
+const year = new Date().getFullYear();
+---
+<footer class="site-footer">
+  <div class="container-wide">
+    <div class="footer-grid">
+      <div>
+        <h4>Make an appointment</h4>
+        <p><a href={SITE.phoneHref}>{SITE.phone}</a><br />UR Medicine Urology</p>
+        <p>{SITE.clinicAddress}<br />Operating at {SITE.hospitals}</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          {MAIN_NAV.map((i) => <li><a href={i.href}>{i.label}</a></li>)}
+        </ul>
+      </div>
+      <div>
+        <h4>More</h4>
+        <ul>
+          {FOOTER_NAV.map((i) => <li><a href={i.href}>{i.label}</a></li>)}
+          <li><a href={SITE.urmcProfile}>UR Medicine profile</a></li>
+          <li><a href={SITE.orcid}>ORCID</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Support BPH research</h4>
+        <ul>
+          <li><a href="https://www.urmc.rochester.edu/giving">UR Medicine Giving (Urology)</a></li>
+          <li><a href={SITE.enucleate}>Prostate Enucleation Coalition</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-legal">
+      <p>This site is for educational purposes only and does not constitute medical advice. Using this site does not establish a provider&ndash;patient relationship; that relationship begins at a consultation.</p>
+      <p>This site collects no personal health information and uses no tracking cookies.</p>
+      <p>&copy; {year} Scott Quarrier, MD, MPH.</p>
+    </div>
+  </div>
+</footer>

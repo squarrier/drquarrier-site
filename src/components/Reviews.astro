@@ -1,0 +1,37 @@
+---
+import { SITE } from '../consts';
+// Verified UR Medicine (Press Ganey) patient ratings. Aggregate-led for credibility.
+const quotes = [
+  { text: 'Dr. Quarrier has been the best possible provider throughout the process of diagnosis, treatment and recovery from my HoLEP procedure. I have recommended him to a friend.', date: 'June 2024' },
+  { text: 'He is excellent. Changed my life. Never felt this good in 10 to 15 years.', date: 'July 2023' },
+  { text: 'The best urologist I’ve ever worked with. He puts me at ease and gives me complete information, no matter what the procedure or issue.', date: 'March 2025' },
+];
+---
+<section class="reviews" aria-labelledby="reviews-h">
+  <div class="container-wide">
+    <div class="reviews-head">
+      <div>
+        <p class="eyebrow">What patients say</p>
+        <h2 id="reviews-h">{SITE.rating.value} / 5 from 700+ verified patient surveys</h2>
+        <p class="muted">Ratings collected through the UR Medicine patient-survey program.
+          <a href={SITE.urmcProfile + '#ratings-section'}>See all ratings &amp; comments</a>.</p>
+      </div>
+    </div>
+    <ul class="review-cards">
+      {quotes.map((q) => (
+        <li>
+          <p>&ldquo;{q.text}&rdquo;</p>
+          <span class="muted">Verified patient review &middot; {q.date}</span>
+        </li>
+      ))}
+    </ul>
+  </div>
+</section>
+<style>
+  .reviews { background: var(--bg-soft); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 2.5rem 0; }
+  .reviews-head h2 { margin: .2rem 0 .3rem; }
+  .review-cards { list-style: none; margin: 1.5rem 0 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; }
+  .review-cards li { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 1.1rem 1.2rem; box-shadow: var(--shadow); }
+  .review-cards p { font-family: var(--serif); color: var(--ink); margin: 0 0 .6rem; }
+  .review-cards span { font-size: .82rem; }
+</style>

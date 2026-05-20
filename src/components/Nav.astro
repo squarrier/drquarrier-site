@@ -1,0 +1,28 @@
+---
+import { SITE, MAIN_NAV } from '../consts';
+const path = Astro.url.pathname.replace(/\/$/, '') || '/';
+---
+<header class="site-header">
+  <nav class="nav" aria-label="Primary">
+    <a class="brand" href="/">Scott Quarrier, MD<span>HoLEP &middot; UR Medicine Urology</span></a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">
+      <span aria-hidden="true">&#9776;</span> Menu
+    </button>
+    <ul class="nav-links" id="primary-nav">
+      {MAIN_NAV.map((item) => (
+        <li>
+          <a href={item.href} aria-current={path === item.href ? 'page' : undefined}>{item.label}</a>
+        </li>
+      ))}
+      <li><a class="nav-cta" href={SITE.phoneHref}>Call {SITE.phone}</a></li>
+    </ul>
+  </nav>
+</header>
+<script>
+  const btn = document.querySelector('.nav-toggle');
+  const menu = document.getElementById('primary-nav');
+  btn?.addEventListener('click', () => {
+    const open = menu?.classList.toggle('open');
+    btn.setAttribute('aria-expanded', String(!!open));
+  });
+</script>

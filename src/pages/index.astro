@@ -1,0 +1,151 @@
+---
+import { SITE } from '../consts';
+import Base from '../layouts/Base.astro';
+import Reviews from '../components/Reviews.astro';
+import CallCTA from '../components/CallCTA.astro';
+
+const desc = 'Dr. Scott Quarrier is a fellowship-trained HoLEP surgeon at UR Medicine in Rochester, NY — a high-volume practice for enlarged-prostate (BPH) surgery and complex kidney stones.';
+---
+<Base title="Scott Quarrier, MD — Fellowship-trained HoLEP surgeon at UR Medicine" description={desc} schemaType="WebPage">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container-wide hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow">Holmium Laser Enucleation of the Prostate (HoLEP)</p>
+        <h1>Scott Quarrier, MD, MPH</h1>
+        <p class="hero-tag">Fellowship-trained HoLEP surgeon at the University of Rochester.</p>
+        <p class="hero-lead">A high-volume HoLEP practice serving Rochester, Western and Central New York, the Finger Lakes, and beyond — with the academic depth to treat the prostates and patients other surgeons turn away.</p>
+        <p><a class="cta-call" href={SITE.phoneHref}>Call UR Medicine Urology: {SITE.phone}</a></p>
+        <p class="hero-links">
+          <a href="/holep">What is HoLEP?</a> ·
+          <a href="/why-holep">Why HoLEP?</a> ·
+          <a href="/early-intervention">Why not wait?</a> ·
+          <a href="/symptom-check">Check your symptoms</a>
+        </p>
+      </div>
+      <div class="hero-photo">
+        <img src="/photos/headshot.png" width="420" height="525"
+          alt="Dr. Scott Quarrier, MD, MPH — Associate Professor of Urology, University of Rochester" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="container section">
+    <h2>About Dr. Quarrier</h2>
+    <div class="about-grid">
+      <div>
+        <p>Dr. Scott Quarrier is an Associate Professor of Urology at the University of Rochester, where he co-directs the Endourology Fellowship Program. His practice focuses on <strong>HoLEP for benign prostatic hyperplasia (BPH)</strong> and the surgical management of <strong>complex kidney stone disease</strong>. He operates at {SITE.hospitals} and sees patients at {SITE.clinicAddress}.</p>
+        <p>He is a national HoLEP educator who teaches the procedure to practicing urologists and trains across the major device platforms — so the technique, not any one manufacturer's equipment, is what's taught.</p>
+        <ul class="creds">
+          <li>Endourology Fellowship — University of Wisconsin–Madison</li>
+          <li>Urology Residency — University of Rochester</li>
+          <li>MD — Stony Brook University School of Medicine</li>
+          <li>2025 Top-5% U.S. Urology Researcher (Avant-garde Health) · 2024 AUA Young Urologist of the Year</li>
+        </ul>
+      </div>
+      <figure class="about-photo">
+        <img src="/photos/Headshot2.png" width="320" height="400" loading="lazy"
+          alt="Dr. Scott Quarrier" />
+      </figure>
+    </div>
+  </section>
+
+  <Reviews />
+
+  <!-- VALUE SECTIONS -->
+  <section class="container section">
+    <div class="cards">
+      <a class="card" href="/holep">
+        <h3>What is HoLEP?</h3>
+        <p>A transurethral laser procedure that removes the obstructing prostate tissue completely — no incisions, tissue sent to pathology, durable results.</p>
+        <span class="more">Read about the procedure →</span>
+      </a>
+      <a class="card" href="/why-holep">
+        <h3>Why HoLEP?</h3>
+        <p>Works at any prostate size, the lowest retreatment rate of any BPH procedure, favorable bleeding profile, most patients home the same day.</p>
+        <span class="more">Compare the options →</span>
+      </a>
+      <a class="card" href="/early-intervention">
+        <h3>Why not wait?</h3>
+        <p>Untreated symptoms carry real costs — sleep, falls, sexual function — and waiting until medication fails can mean a harder operation later.</p>
+        <span class="more">See the evidence →</span>
+      </a>
+      <a class="card" href="/recovery">
+        <h3>What recovery looks like</h3>
+        <p>The honest, week-by-week version — catheter at home, what's normal, and the few things that warrant a call.</p>
+        <span class="more">Read the recovery guide →</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- RESEARCH -->
+  <section class="research-band">
+    <div class="container-wide research-grid">
+      <figure>
+        <img src="/photos/aua-2025-presentation.jpg" width="560" height="300" loading="lazy"
+          alt="Dr. Scott Quarrier presenting at the American Urological Association Annual Meeting, Las Vegas, 2025" />
+        <figcaption class="muted">Presenting at the AUA Annual Meeting, Las Vegas, 2025</figcaption>
+      </figure>
+      <div>
+        <p class="eyebrow">Research</p>
+        <h2>Care informed by research</h2>
+        <p>Dr. Quarrier's research centers on teaching HoLEP to more surgeons, measuring what actually matters to patients (patient-reported outcomes), equity in BPH care, and improving the patient experience.</p>
+        <p><a href="/research">Read about the research →</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESOURCES -->
+  <section class="container section">
+    <h2>Resources</h2>
+    <ul class="resources">
+      <li><a href={SITE.bphVideo}>BPH 101: Treatment Options &amp; Advancements (video talk)</a></li>
+      <li><a href={SITE.enucleate}>Prostate Enucleation Coalition — patient education &amp; surgeon directory</a></li>
+      <li><a href="/symptom-check">Check your urinary symptoms (IPSS)</a></li>
+      <li><a href="/for-providers">For referring providers</a> · <a href="/fellowship">Fellowship &amp; training</a></li>
+    </ul>
+  </section>
+
+  <CallCTA sub="Calling does not commit you to surgery — it starts the conversation." />
+</Base>
+
+<style>
+  .hero { background: linear-gradient(180deg, var(--bg-tint), #fff); border-bottom: 1px solid var(--line); padding: 2.5rem 0 2rem; }
+  .hero-grid { display: grid; grid-template-columns: 1.4fr .9fr; gap: 2rem; align-items: center; }
+  .hero-copy h1 { margin: .1rem 0 .25rem; }
+  .hero-tag { font-family: var(--serif); font-size: 1.35rem; color: var(--navy); margin: 0 0 .6rem; }
+  .hero-lead { font-size: 1.08rem; color: var(--body); margin-bottom: 1.2rem; }
+  .hero-links { margin-top: 1rem; color: var(--muted); font-size: .95rem; }
+  .hero-photo img { border-radius: var(--radius); box-shadow: var(--shadow); width: 100%; height: auto; object-fit: cover; }
+  @media (max-width: 800px) {
+    .hero-grid { grid-template-columns: 1fr; }
+    .hero-photo { order: -1; max-width: 280px; }
+  }
+
+  .section { padding: 2.5rem 0; }
+  .about-grid { display: grid; grid-template-columns: 1.6fr .8fr; gap: 1.75rem; align-items: start; }
+  .about-photo { margin: 0; }
+  .about-photo img { border-radius: var(--radius); box-shadow: var(--shadow); width: 100%; }
+  .creds { color: var(--muted); font-size: .95rem; padding-left: 1.1rem; }
+  .creds li { margin-bottom: .3rem; }
+  @media (max-width: 700px) { .about-grid { grid-template-columns: 1fr; } .about-photo { max-width: 240px; } }
+
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; }
+  .card { display: block; text-decoration: none; color: inherit; background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 1.25rem; box-shadow: var(--shadow); transition: transform .12s ease, border-color .12s ease; }
+  .card:hover { transform: translateY(-2px); border-color: var(--accent); }
+  .card h3 { margin: 0 0 .4rem; color: var(--navy); }
+  .card p { color: var(--body); font-size: .96rem; margin-bottom: .6rem; }
+  .card .more { color: var(--accent-600); font-weight: 600; font-size: .9rem; }
+
+  .research-band { background: var(--bg-soft); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 2.5rem 0; }
+  .research-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: center; }
+  .research-grid figure { margin: 0; }
+  .research-grid img { border-radius: var(--radius); box-shadow: var(--shadow); width: 100%; }
+  .research-grid figcaption { font-size: .85rem; margin-top: .4rem; }
+  @media (max-width: 760px) { .research-grid { grid-template-columns: 1fr; } }
+
+  .resources { list-style: none; padding: 0; margin: 0; }
+  .resources li { padding: .5rem 0; border-bottom: 1px solid var(--line); }
+</style>

@@ -1,0 +1,13 @@
+---
+import { SITE } from '../consts';
+interface Props { heading?: string; sub?: string; }
+const { heading = 'Make an appointment', sub } = Astro.props;
+---
+<div class="cta-band">
+  <div class="container">
+    <h2>{heading}</h2>
+    <p><a class="cta-call" href={SITE.phoneHref}>Call UR Medicine Urology: {SITE.phone}</a></p>
+    {sub && <p class="cta-sub">{sub}</p>}
+    <p class="cta-sub">{SITE.clinicAddress} &middot; Operating at {SITE.hospitals}</p>
+  </div>
+</div>

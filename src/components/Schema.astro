@@ -1,0 +1,102 @@
+---
+import { SITE } from '../consts';
+
+interface Props {
+  pageUrl: string;        // absolute URL of the current page
+  pageTitle: string;
+  pageDescription: string;
+  schemaType?: 'Article' | 'MedicalProcedure' | 'MedicalCondition' | 'FAQPage' | 'WebPage';
+}
+const { pageUrl, pageTitle, pageDescription, schemaType = 'WebPage' } = Astro.props;
+const D = SITE.domain;
+
+const physician = {
+  '@type': 'Physician',
+  '@id': `${D}/#scott-quarrier`,
+  name: 'Scott O. Quarrier, MD, MPH',
+  honorificSuffix: 'MD, MPH',
+  image: `${D}/photos/headshot.png`,
+  url: `${D}/`,
+  telephone: '+1-585-275-2838',
+  sameAs: [
+    SITE.orcid,
+    SITE.scholar,
+    SITE.urmcProfile,
+    'https://www.doximity.com/pub/scott-quarrier-md',
+    'https://www.healthgrades.com/physician/dr-scott-quarrier-y9r6lsz',
+    'https://www.vitals.com/doctors/1ppq7j/scott-quarrier',
+    'https://health.usnews.com/doctors/scott-quarrier-995353',
+    'https://doctor.webmd.com/doctor/scott-quarrier-ea5cc7f3-48fe-4eb6-b650-803bc20fc0d2-overview',
+  ],
+  identifier: { '@type': 'PropertyValue', propertyID: 'ORCID', value: '0000-0002-2546-5264' },
+  jobTitle: 'Associate Professor of Urology',
+  medicalSpecialty: ['Urology', 'Endourology'],
+  knowsAbout: [
+    'Benign Prostatic Hyperplasia', 'Holmium Laser Enucleation of the Prostate', 'HoLEP',
+    'Endourology', 'Kidney Stone Disease', 'Patient-Reported Outcomes',
+  ],
+  alumniOf: [
+    { '@type': 'CollegeOrUniversity', name: 'Wesleyan University' },
+    { '@type': 'MedicalOrganization', name: 'Stony Brook University School of Medicine' },
+    { '@type': 'MedicalOrganization', name: 'University of Rochester (Urology Residency)' },
+    { '@type': 'MedicalOrganization', name: 'University of Wisconsin–Madison (Endourology Fellowship)' },
+  ],
+  worksFor: { '@id': `${D}/#ur-medicine-urology` },
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: SITE.rating.value,
+    reviewCount: SITE.rating.count,
+    bestRating: '5',
+    worstRating: '1',
+  },
+};
+
+const business = {
+  '@type': 'MedicalBusiness',
+  '@id': `${D}/#ur-medicine-urology`,
+  name: 'UR Medicine Urology — Dr. Scott Quarrier',
+  url: SITE.urmcUrology,
+  telephone: '+1-585-275-2838',
+  image: `${D}/photos/headshot.png`,
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: '158 Sawgrass Drive, Suite 230',
+    addressLocality: 'Rochester',
+    addressRegion: 'NY',
+    postalCode: '14620',
+    addressCountry: 'US',
+  },
+  medicalSpecialty: ['Urology', 'Endourology'],
+  physician: { '@id': `${D}/#scott-quarrier` },
+  areaServed: ['Rochester NY', 'Western New York', 'Finger Lakes Region', 'Central New York', 'Southern Tier of New York'],
+};
+
+const website = {
+  '@type': 'WebSite',
+  '@id': `${D}/#website`,
+  url: `${D}/`,
+  name: 'Dr. Scott Quarrier — HoLEP at UR Medicine',
+  publisher: { '@id': `${D}/#scott-quarrier` },
+  inLanguage: 'en-US',
+};
+
+const webpage: Record<string, unknown> = {
+  '@type': schemaType === 'FAQPage' ? 'WebPage' : schemaType,
+  '@id': `${pageUrl}#page`,
+  url: pageUrl,
+  name: pageTitle,
+  description: pageDescription,
+  isPartOf: { '@id': `${D}/#website` },
+  author: { '@id': `${D}/#scott-quarrier` },
+};
+if (schemaType === 'MedicalProcedure') {
+  webpage.bodyLocation = 'Prostate';
+  webpage.procedureType = 'https://schema.org/SurgicalProcedure';
+}
+
+const graph = {
+  '@context': 'https://schema.org',
+  '@graph': [physician, business, website, webpage],
+};
+---
+<script type="application/ld+json" set:html={JSON.stringify(graph)} />

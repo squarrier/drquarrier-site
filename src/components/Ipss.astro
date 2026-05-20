@@ -1,0 +1,127 @@
+---
+// IPSS self-assessment — client-side only, no data leaves the browser.
+// Style is is:global (the form is built at runtime by JS, so scoped styles would not reach injected nodes).
+// Script is is:inline so Astro does not transform the vanilla IIFE.
+---
+<section id="ipss-tool" aria-labelledby="ipss-heading">
+  <h2 id="ipss-heading">Check your urinary symptoms</h2>
+  <p class="lede">This is the International Prostate Symptom Score (IPSS) &mdash; the standard questionnaire urologists use to measure enlarged-prostate symptoms. Answer the eight questions for an instant score. Everything is calculated on your own device; nothing is saved or sent.</p>
+
+  <form id="ipss-form" novalidate>
+    <div data-scale="freq"></div>
+    <div data-scale="nocturia"></div>
+    <div data-scale="qol"></div>
+    <p class="err" id="ipss-err">Please answer every question to see your score.</p>
+    <div class="actions">
+      <button type="submit" class="calc">Calculate my score</button>
+      <button type="button" class="reset" id="ipss-reset">Start over</button>
+    </div>
+  </form>
+
+  <div class="result" id="ipss-result" role="region" aria-live="polite" tabindex="-1">
+    <h3 id="ipss-band-title"></h3>
+    <p class="score-line">Your symptom score: <span class="score-num" id="ipss-score"></span> / 35 <span id="ipss-qol-line"></span></p>
+    <p id="ipss-interpretation"></p>
+    <div class="cta">
+      <p id="ipss-cta-text"></p>
+      <a href="tel:5852752838">Call UR Medicine Urology: (585)&nbsp;275-2838</a>
+    </div>
+  </div>
+
+  <p class="privacy">This tool is for education only and is not a diagnosis. Your answers stay in your browser &mdash; they are not stored, sent, or seen by anyone. Only a urologist who examines you can determine the cause of your symptoms and the right treatment.</p>
+</section>
+
+<style is:global>
+  #ipss-tool fieldset { border: 1px solid var(--line); border-radius: 10px; margin: 0 0 .75rem; padding: .9rem 1rem; background: var(--bg-soft); }
+  #ipss-tool legend { font-weight: 600; padding: 0 .4rem; font-size: .98rem; color: var(--ink); font-family: var(--sans); }
+  #ipss-tool .opts { display: grid; grid-template-columns: repeat(6, 1fr); gap: .35rem; margin-top: .6rem; }
+  #ipss-tool .opt { position: relative; }
+  #ipss-tool .opt input { position: absolute; opacity: 0; width: 100%; height: 100%; cursor: pointer; margin: 0; }
+  #ipss-tool .opt span { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: .15rem; border: 1px solid var(--line); border-radius: 8px; padding: .5rem .25rem; text-align: center; font-size: .72rem; color: var(--muted); min-height: 3.2rem; background: #fff; transition: all .12s ease; }
+  #ipss-tool .opt span .num { font-size: 1.05rem; font-weight: 700; color: var(--ink); }
+  #ipss-tool .opt input:checked + span { border-color: var(--accent); background: var(--accent); color: #fff; }
+  #ipss-tool .opt input:checked + span .num { color: #fff; }
+  #ipss-tool .opt input:focus-visible + span { outline: 3px solid var(--focus); outline-offset: 2px; }
+  #ipss-tool .qol-opts { grid-template-columns: repeat(7, 1fr); }
+  #ipss-tool .actions { display: flex; gap: .75rem; align-items: center; margin: 1rem 0; flex-wrap: wrap; }
+  #ipss-tool button { font: inherit; font-weight: 600; border: 0; border-radius: 8px; padding: .7rem 1.4rem; cursor: pointer; }
+  #ipss-tool .calc { background: var(--navy); color: #fff; }
+  #ipss-tool .reset { background: transparent; color: var(--accent-600); text-decoration: underline; padding: .7rem .4rem; }
+  #ipss-tool .result { display: none; border-radius: 10px; padding: 1.1rem 1.25rem; margin-top: .5rem; border: 2px solid var(--line); }
+  #ipss-tool .result.show { display: block; }
+  #ipss-tool .result h3 { margin: 0 0 .4rem; font-size: 1.25rem; }
+  #ipss-tool .score-line { font-size: 1.05rem; margin: 0 0 .6rem; }
+  #ipss-tool .score-num { font-size: 1.6rem; font-weight: 800; }
+  #ipss-tool .band-mild { border-color:#2e7d52; } #ipss-tool .band-mild h3 { color:#2e7d52; }
+  #ipss-tool .band-moderate { border-color:#b5602a; } #ipss-tool .band-moderate h3 { color:#b5602a; }
+  #ipss-tool .band-severe { border-color:#b03a2e; } #ipss-tool .band-severe h3 { color:#b03a2e; }
+  #ipss-tool .cta { margin-top: .8rem; padding-top: .8rem; border-top: 1px solid var(--line); }
+  #ipss-tool .cta a { display: inline-block; background: var(--navy); color:#fff; text-decoration: none; font-weight: 700; padding: .65rem 1.2rem; border-radius: 8px; }
+  #ipss-tool .privacy { font-size: .82rem; color: var(--muted); margin-top: 1rem; }
+  #ipss-tool .err { color:#b03a2e; font-weight:600; font-size:.9rem; display:none; }
+  #ipss-tool .err.show { display:block; }
+  @media (max-width: 540px) {
+    #ipss-tool .opts { grid-template-columns: repeat(3, 1fr); }
+    #ipss-tool .qol-opts { grid-template-columns: repeat(4, 1fr); }
+  }
+</style>
+
+<script is:inline>
+  (function () {
+    var FREQ = [["0","Not at all"],["1","Less than 1 in 5 times"],["2","Less than half the time"],["3","About half the time"],["4","More than half the time"],["5","Almost always"]];
+    var NOCT = [["0","None"],["1","1 time"],["2","2 times"],["3","3 times"],["4","4 times"],["5","5+ times"]];
+    var QOL = [["0","Delighted"],["1","Pleased"],["2","Mostly satisfied"],["3","Mixed"],["4","Mostly dissatisfied"],["5","Unhappy"],["6","Terrible"]];
+    var freqQs = [
+      "Over the past month, how often have you had the sensation of not emptying your bladder completely after you finished urinating?",
+      "Over the past month, how often have you had to urinate again less than two hours after you finished urinating?",
+      "Over the past month, how often have you found you stopped and started again several times when you urinated?",
+      "Over the past month, how often have you found it difficult to postpone urination?",
+      "Over the past month, how often have you had a weak urinary stream?",
+      "Over the past month, how often have you had to push or strain to begin urination?"
+    ];
+    var noctQ = "Over the past month, how many times did you most typically get up to urinate from the time you went to bed until the time you got up in the morning?";
+    var qolQ = "If you were to spend the rest of your life with your urinary condition just the way it is now, how would you feel about that?";
+    function field(name, legend, scale, cls) {
+      var fs = '<fieldset><legend>' + legend + '</legend><div class="opts ' + (cls||'') + '">';
+      scale.forEach(function (o) { fs += '<label class="opt"><input type="radio" name="' + name + '" value="' + o[0] + '" required><span><span class="num">' + o[0] + '</span>' + o[1] + '</span></label>'; });
+      return fs + '</div></fieldset>';
+    }
+    var freqWrap = document.querySelector('#ipss-tool [data-scale="freq"]');
+    freqQs.forEach(function (q, i) { freqWrap.insertAdjacentHTML('beforeend', field('q' + (i + 1), (i + 1) + '. ' + q, FREQ)); });
+    document.querySelector('#ipss-tool [data-scale="nocturia"]').innerHTML = field('q7', '7. ' + noctQ, NOCT);
+    document.querySelector('#ipss-tool [data-scale="qol"]').innerHTML = field('qol', 'Quality of life - ' + qolQ, QOL, 'qol-opts');
+    var form = document.getElementById('ipss-form'), result = document.getElementById('ipss-result'), err = document.getElementById('ipss-err');
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var total = 0, answered = 0;
+      for (var i = 1; i <= 7; i++) { var sel = form.querySelector('input[name="q' + i + '"]:checked'); if (sel) { total += parseInt(sel.value, 10); answered++; } }
+      var qolSel = form.querySelector('input[name="qol"]:checked');
+      if (answered < 7 || !qolSel) { err.classList.add('show'); return; }
+      err.classList.remove('show');
+      var title, interp, cta, cls;
+      if (total <= 7) {
+        title = "Mild symptoms"; cls = "band-mild";
+        interp = "A score in this range usually means symptoms are present but not yet bothersome. Many men in this range watch and wait, or use lifestyle measures. It's still worth a baseline conversation with a urologist, especially if the score has been climbing.";
+        cta = "If your symptoms are starting to affect your day, a consultation is a reasonable next step.";
+      } else if (total <= 19) {
+        title = "Moderate symptoms"; cls = "band-moderate";
+        interp = "A score in this range means symptoms are meaningfully affecting daily life. This is the range where men typically start medication, or increasingly consider a definitive procedure like HoLEP, particularly if medication isn't helping or its side effects aren't worth it.";
+        cta = "This is a good time to talk with a urologist about your options, including whether earlier definitive treatment makes sense for you.";
+      } else {
+        title = "Severe symptoms"; cls = "band-severe";
+        interp = "A score in this range means symptoms are substantially affecting quality of life. Men in this range often benefit most clearly from definitive treatment. HoLEP works at any prostate size, including the large glands and complex situations other procedures can't address.";
+        cta = "It's worth scheduling a consultation to discuss definitive options. Asking does not commit you to surgery.";
+      }
+      var qolVal = parseInt(qolSel.value, 10);
+      var qolText = (qolVal >= 4) ? " Your answer also shows the symptoms are bothering you, and that bother matters as much as the number." : "";
+      result.className = "result show " + cls;
+      document.getElementById('ipss-band-title').textContent = title;
+      document.getElementById('ipss-score').textContent = total;
+      document.getElementById('ipss-qol-line').textContent = " | quality-of-life rating: " + qolVal + " / 6";
+      document.getElementById('ipss-interpretation').textContent = interp + qolText;
+      document.getElementById('ipss-cta-text').textContent = cta;
+      result.focus(); result.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+    document.getElementById('ipss-reset').addEventListener('click', function () { form.reset(); result.className = "result"; err.classList.remove('show'); form.scrollIntoView({ behavior: "smooth", block: "start" }); });
+  })();
+</script>

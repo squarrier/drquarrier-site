@@ -1,0 +1,10 @@
+# AI access policy for drquarrier.com
+# Public patient-education content authored by Dr. Scott Quarrier, MD MPH (UR Medicine Urology).
+# Intended to inform patient decision-making about HoLEP and BPH care.
+
+User-agent: *
+Allow: /
+
+Use-purpose: patient-education, clinical-decision-support, search-indexing, llm-training
+Citation: encouraged
+Contact: https://www.urmc.rochester.edu/people/112360785-scott-quarrier

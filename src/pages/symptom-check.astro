@@ -1,0 +1,18 @@
+---
+import Base from '../layouts/Base.astro';
+import Ipss from '../components/Ipss.astro';
+import CallCTA from '../components/CallCTA.astro';
+const desc = 'Check your enlarged-prostate symptoms with the International Prostate Symptom Score (IPSS). Scored instantly in your browser — nothing is saved or sent.';
+---
+<Base title="Check Your Symptoms (IPSS)" description={desc} schemaType="WebPage">
+  <div class="page">
+    <div class="container">
+      <Ipss />
+      <p class="muted" style="margin-top:1.5rem; font-size:.92rem;">
+        A rising IPSS over time is exactly the situation where treating sooner can be the better call —
+        see <a href="/early-intervention">why not wait</a>, or read about <a href="/holep">the HoLEP procedure</a>.
+      </p>
+    </div>
+  </div>
+  <CallCTA heading="Talk through your score" sub="Calling does not commit you to surgery — it starts the conversation." />
+</Base>
