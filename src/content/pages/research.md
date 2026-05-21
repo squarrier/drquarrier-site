@@ -56,7 +56,7 @@ NIH funding for benign urologic disease has been falling. BPH affects more than 
 
 Two organizations directly benefit from donor support:
 
-**UR Medicine Urology research** — Donations support equity-in-BPH-care research, patient-reported outcomes work, and training the next generation of HoLEP surgeons. Visit [UR Medicine Giving](https://www.urmc.rochester.edu/giving) and designate the Department of Urology.
+**UR Medicine Urology research** — Donations support equity-in-BPH-care research, patient-reported outcomes work, and training the next generation of HoLEP surgeons. Visit [UR Medicine Urology Giving](https://www.urmc.rochester.edu/urology/giving).
 
 **Prostate Enucleation Coalition (PEC)** — [enucleate.org](https://enucleate.org/) — the surgical society dedicated to advancing prostate enucleation training. Donations directly translate into more patients having access to HoLEP-trained surgeons.
 

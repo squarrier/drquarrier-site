@@ -27,13 +27,13 @@ The patient is asleep under general anesthesia, or numb from the waist down unde
 
 In a hospital like UR Medicine, an experienced HoLEP surgeon can do same-day discharge for the majority of patients — go home the day of surgery, voiding on your own. Dr. Quarrier has published on the same-day discharge protocol; for a sizable fraction of patients, an overnight stay is unnecessary.
 
-## Watch a 10-minute primer
+## Watch: BPH 101 with Dr. Quarrier
 
 <figure class="video-embed">
   <iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/rJXvKQtFYxc" title="BPH 101: Latest Treatment Options and Advancements with Dr. Quarrier" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </figure>
 
-If you'd rather skim, the rest of this page covers the same ground in writing.
+This is Dr. Quarrier's full BPH 101 talk — a thorough walk through diagnosis and the range of treatment options. If you'd rather read, the rest of this page covers the essentials.
 
 ## Who HoLEP is for
 
