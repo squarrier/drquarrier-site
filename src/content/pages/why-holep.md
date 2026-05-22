@@ -43,6 +43,8 @@ With that framing, what follows is the honest case.
 | **Ejaculation preserved** | No (retrograde ~75%) | No (retrograde common) | Often yes | Yes (designed claim) | **Often yes** (short-term)[^19] | Variable | Often yes | Often yes |
 | **Long-term erectile function** | **Best preserved in head-to-head time-adjusted data**[^20] | Comparable to HoLEP | Comparable | Comparable | Worse than HoLEP at 5 yr (time-adjusted)[^20] | Variable | Limited data | Comparable |
 
+*Abbreviations used in the table: TURP = transurethral resection of the prostate; PVP = photoselective vaporization (GreenLight); PAE = prostatic artery embolization. Each procedure is defined in full in its own section below.*
+
 The two rows that should anchor the decision for most patients are **prostate-size range** and **5-year retreatment rate.** Almost everything else in the table is within the noise of patient preference.
 
 The rest of this page walks through each procedure one at a time, with the strongest honest framing of what it does well and where the data say it falls short.
