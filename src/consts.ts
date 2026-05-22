@@ -29,7 +29,7 @@ export const MAIN_NAV: { label: string; href: string }[] = [
   { label: 'Symptom Check', href: '/symptom-check' },
   { label: 'Research', href: '/research' },
   { label: 'FAQ', href: '/faq' },
-  { label: 'Education', href: '/fellowship' },
+  { label: 'Teaching', href: '/fellowship' },
 ];
 
 // Footer secondary links (entry/logistics/colleague pages not in the top nav).

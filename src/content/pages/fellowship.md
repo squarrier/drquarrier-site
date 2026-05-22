@@ -1,9 +1,9 @@
 ---
-title: "HoLEP Education & Fellowship"
-description: "HoLEP education and the endourology fellowship with Dr. Scott Quarrier at UR Medicine — for residents and practicing urologists who want to train."
+title: "HoLEP Teaching & Fellowship"
+description: "Train with Dr. Scott Quarrier at UR Medicine — the endourology fellowship for residents and HoLEP teaching for practicing urologists."
 schemaType: Article
 ---
-# HoLEP Education & Fellowship
+# HoLEP Teaching & Fellowship
 
 > *This page is for urology colleagues who want to train with Dr. Quarrier — residents weighing fellowship choices, and practicing urologists who want to learn or sharpen their HoLEP technique. (Looking to send a patient instead? See [Refer a patient](/for-providers).)*
 
