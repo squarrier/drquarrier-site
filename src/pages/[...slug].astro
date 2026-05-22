@@ -4,6 +4,7 @@ import { SITE } from '../consts';
 import Base from '../layouts/Base.astro';
 import CallCTA from '../components/CallCTA.astro';
 import FaqSchema from '../components/FaqSchema.astro';
+import ContactForm from '../components/ContactForm.astro';
 
 // Raw markdown for every content page (used to build FAQPage JSON-LD from the FAQ body).
 const rawPages = import.meta.glob('../content/pages/*.md', { query: '?raw', import: 'default', eager: true }) as Record<string, string>;
@@ -24,6 +25,7 @@ const rawBody = isFaq ? (rawPages[`../content/pages/${page.id}.md`] ?? '') : '';
   <div class="page">
     <article class="container prose">
       <Content />
+      {page.id === 'fellowship' && <ContactForm />}
     </article>
   </div>
   <CallCTA sub="Calling does not commit you to surgery — it starts the conversation." />
