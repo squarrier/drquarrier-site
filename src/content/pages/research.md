@@ -58,10 +58,10 @@ Two organizations directly benefit from donor support:
 
 **UR Medicine Urology research** — Donations support equity-in-BPH-care research, patient-reported outcomes work, and training the next generation of HoLEP surgeons. Visit [UR Medicine Urology Giving](https://www.urmc.rochester.edu/urology/giving).
 
-**Prostate Enucleation Coalition (PEC)** — [enucleate.org](https://enucleate.org/) — the surgical society dedicated to advancing prostate enucleation training. Donations directly translate into more patients having access to HoLEP-trained surgeons.
+**Prostate Enucleation Collaborative (PEC)** — [enucleate.org](https://enucleate.org/) — the surgical society dedicated to advancing prostate enucleation training. Donations directly translate into more patients having access to HoLEP-trained surgeons.
 
 Neither donation supports Dr. Quarrier personally. Both support the missions the work on this page represents.
 
 ## What to do next
 
-To schedule a consultation with Dr. Quarrier, call UR Medicine Urology at **(585) 275-2838**.
+To schedule a consu
