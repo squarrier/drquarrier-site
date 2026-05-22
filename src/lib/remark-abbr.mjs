@@ -34,13 +34,77 @@ const MAP = {
 
 // Plain-language glosses for non-acronym jargon. The first use per page gets the
 // parenthetical. The `pattern` matches the whole word family (e.g. morcellate/-ed/-ion/-or).
-// Add future jargon here.
+// A gloss is skipped if the term is already immediately followed by "(" (author already
+// explained it inline). Add future jargon here — one entry each.
 const GLOSS = [
-  {
-    id: 'morcellation',
-    pattern: '(?<![\\w-])morcellat\\w*',
-    gloss: '(the freed tissue is broken into tiny fragments and suctioned out through the scope)',
-  },
+  // --- procedure / anatomy ---
+  { id: 'morcellation', pattern: '(?<![\\w-])morcellat\\w*',
+    gloss: '(the freed tissue is broken into tiny fragments and suctioned out through the scope)' },
+  { id: 'enucleation', pattern: '(?<![\\w-])(?<!laser )(?<!Laser )enucleat\\w*',
+    gloss: "(the prostate's inner core is removed whole, leaving the outer shell intact)" },
+  { id: 'adenoma', pattern: '(?<![\\w-])adenoma\\w*',
+    gloss: '(the inner part of the prostate that enlarges with age and squeezes the urethra)' },
+  { id: 'median-lobe', pattern: '(?<![\\w-])median lobe',
+    gloss: '(a portion of the prostate that bulges up into the bladder and can block flow)' },
+  { id: 'resectoscope', pattern: '(?<![\\w-])resectoscope\\w*',
+    gloss: '(a slim instrument passed through the urethra that the surgeon works through)' },
+  { id: 'nitinol', pattern: '(?<![\\w-])nitinol',
+    gloss: '(a flexible, springy metal alloy)' },
+  // --- symptoms / measurements ---
+  { id: 'post-void-residual', pattern: '(?<![\\w-])post-void residual',
+    gloss: '(the amount of urine left in the bladder after you finish urinating)' },
+  { id: 'qmax', pattern: '(?<![\\w-])Qmax',
+    gloss: '(the peak urine-flow rate, a standard measure of how obstructed the stream is)' },
+  { id: 'uroflow', pattern: '(?<![\\w-])uroflow\\w*',
+    gloss: '(a simple test that measures how fast your urine flows)' },
+  { id: 'hematuria', pattern: '(?<![\\w-])hematuria',
+    gloss: '(blood in the urine)' },
+  { id: 'bladder-outlet-obstruction', pattern: '(?<![\\w-])bladder outlet obstruction',
+    gloss: "(blockage of the bladder's outflow by the enlarged prostate)" },
+  { id: 'urinary-retention', pattern: '(?<![\\w-])urinary retention',
+    gloss: '(being unable to empty the bladder on your own)' },
+  { id: 'hydronephrosis', pattern: '(?<![\\w-])hydronephrosis',
+    gloss: '(urine backing up and swelling the kidney)' },
+  { id: 'stricture', pattern: '(?<![\\w-])strictur\\w*',
+    gloss: '(a scar-tissue narrowing of the urethra)' },
+  // --- devices / equipment ---
+  { id: 'catheter', pattern: '(?<![\\w-])catheter[\\w-]*',
+    gloss: '(a thin, flexible tube that drains urine from the bladder)' },
+  // --- medications ---
+  { id: 'anticoagulant', pattern: '(?<![\\w-])anticoagula\\w*',
+    gloss: '(blood-thinning medication)' },
+  { id: 'antiplatelet', pattern: '(?<![\\w-])antiplatelet\\w*',
+    gloss: '(a type of blood thinner, such as aspirin or clopidogrel)' },
+  { id: 'alpha-blocker', pattern: '(?<![\\w-])alpha-blocker\\w*',
+    gloss: '(a common prostate medication that relaxes the bladder neck, e.g. tamsulosin)' },
+  { id: 'five-ari', pattern: '(?<![\\w-])5-ARIs?',
+    gloss: '(a prostate medication that slowly shrinks the gland, e.g. finasteride)' },
+  // --- conditions / other ---
+  { id: 'comorbidity', pattern: '(?<![\\w-])comorbidit\\w*',
+    gloss: '(other ongoing medical conditions)' },
+  { id: 'orthostatic-hypotension', pattern: '(?<![\\w-])orthostatic hypotension',
+    gloss: '(a drop in blood pressure on standing that causes light-headedness)' },
+  { id: 'gynecomastia', pattern: '(?<![\\w-])gynecomastia',
+    gloss: '(enlargement of breast tissue)' },
+  { id: 'occult', pattern: '(?<![\\w-])occult',
+    gloss: '(hidden, not previously detected)' },
+  { id: 'prostatectomy', pattern: '(?<![\\w-])prostatectom\\w*',
+    gloss: '(surgical removal of prostate tissue, traditionally through an incision)' },
+  { id: 'ablation', pattern: '(?<![\\w-])ablat\\w*',
+    gloss: '(destroying tissue in place rather than removing it)' },
+  // --- research methodology (for the comparison/research pages) ---
+  { id: 'propensity', pattern: '(?<![\\w-])propensity[\\w-]*',
+    gloss: '(a statistical method for fairly comparing similar patients)' },
+  { id: 'hazard-ratio', pattern: '(?<![\\w-])hazard ratio',
+    gloss: '(a measure of how much a treatment lowers risk over time)' },
+  { id: 'kaplan-meier', pattern: '(?<![\\w-])Kaplan-Meier',
+    gloss: '(a method that accounts for how long each patient was followed)' },
+  { id: 'meta-analysis', pattern: '(?<![\\w-])(network )?meta-analys\\w*',
+    gloss: '(a study that statistically pools results from many earlier studies)' },
+  { id: 'sham', pattern: '(?<![\\w-])sham(?![\\w-])',
+    gloss: '(a placebo procedure used for comparison in a trial)' },
+  { id: 'perioperative', pattern: '(?<![\\w-])perioperativ\\w*',
+    gloss: '(in the period right around surgery)' },
 ];
 
 const SKIP_TYPES = new Set([
