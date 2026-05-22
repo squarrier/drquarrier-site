@@ -7,6 +7,18 @@ schemaType: Article
 
 > *Most BPH procedures work. The honest question isn't "which one works" — it's "which one fits this prostate, this patient, this decade." The data below are the published facts, not the marketing.*
 
+## HoLEP at a glance
+
+The short version, in plain language:
+
+- **Works for any prostate — small or very large.** No gland is too big.
+- **The most durable fix** — the lowest chance of ever needing a repeat procedure.
+- **Less bleeding,** and often safe even for men who can't stop blood thinners.
+- **Removes the blockage completely** — and the removed tissue is checked for cancer.
+- **Most men go home the same day** and are back to normal within a few weeks.
+
+The rest of this page is the detailed, cited comparison against every other option — but if you read only one thing, that's it.
+
 ## A note on how this page is written
 
 The published literature on BPH procedures is uneven. Some procedures have decades of randomized data; others have a single industry-sponsored pivotal trial. Some comparisons have been studied head-to-head; many have not. Where the evidence is strong, this page commits to a claim. Where the evidence is thin, it says so. Most marketing pages don't do this. The result is that competing procedures look more obviously different in marketing than they are in the literature, and HoLEP's actual advantages — which are real — get lost in noise about which procedure preserves which thing.

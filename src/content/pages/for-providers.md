@@ -26,9 +26,10 @@ HoLEP is size-independent, has the lowest retreatment rate of the major BPH proc
 
 ## How to refer
 
-- **Phone:** UR Medicine Urology — (585) 275-2838
+- **UR Medicine Access Center (provider referral line):** (585) 276-3000, or toll-free 1-844-876-6300 — Mon–Fri, 8:00 a.m.–4:30 p.m. ET. The fastest way to connect a patient to Dr. Quarrier.
 - **Through your EHR:** if you are on Epic, route a referral to UR Medicine Urology and flag for Dr. Quarrier (BPH/HoLEP or stone disease).
-- **UR Medicine provider referral portal:** [Refer a Patient — UR Medicine](https://www.urmc.rochester.edu/healthcare-professionals)
+- **Referral guide:** [Refer a Patient — UR Medicine](https://www.urmc.rochester.edu/referring-physicians/referrals.aspx)
+- **Patient scheduling:** your patient can also call UR Medicine Urology directly at (585) 275-2838.
 
 ## What helps the visit go smoothly
 

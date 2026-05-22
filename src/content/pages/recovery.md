@@ -95,7 +95,7 @@ Most men describe themselves as "basically back to normal" by week 6. Concrete t
 
 **Late bleeding after exertion.** This is the most-misunderstood feature of HoLEP recovery. Roughly two to four weeks out, after a few days of normal-looking urine, a sudden episode of pink or red urine can happen — typically after a vigorous walk, a long drive, sex, a particularly hard bowel movement, or yard work. The patient panics and assumes something has gone wrong. In the vast majority of cases, nothing has gone wrong. The healing tissue inside the prostate has a small scab that breaks loose. The bleeding settles with hydration and reduced activity over a day or two. If the urine becomes thick with clots, if you cannot urinate, or if the bleeding is heavy and bright red and not improving after a few hours, that warrants a phone call. Otherwise, drink water, walk less, and watch it clear.
 
-**Retrograde ejaculation.** When sexual activity resumes, most men experience retrograde ejaculation for the first time. Orgasm sensation is preserved — most men describe it as essentially unchanged, some report it more intense. The semen goes into the bladder rather than out and exits invisibly with the next urination. This effect is permanent. It is not painful. It does affect fertility. For most men, after the initial novelty, it is not a source of ongoing distress.
+**Retrograde ejaculation.** When sexual activity resumes, most men experience retrograde ejaculation for the first time. Orgasm sensation is preserved — most men describe it as essentially unchanged, some report it more intense. The semen goes into the bladder rather than out and exits invisibly with the next urination. This effect is permanent. It is not painful. It does affect fertility. For most men, after the initial novelty, it is not a source of ongoing concern.
 
 **Climacturia.** Some men experience a small release of urine at orgasm in the early recovery window. Emptying the bladder before sex usually resolves it. Climacturia typically improves over a few months. It is not a sign of incontinence.
 
@@ -155,7 +155,7 @@ A few honest negatives — things that the published patient experience consiste
 - **You will not lose your erections.** Erectile function is preserved in most men. If it changes, the change is typically modest and transient.
 - **You will not be permanently incontinent.** Persistent incontinence past 12 weeks is uncommon (1% or less in published long-term data) and almost always treatable when it does occur.
 - **You will not need another BPH procedure.** Long-term HoLEP retreatment rates are near zero.
-- **Orgasm will not feel different to the point of distress.** Most men report orgasm intensity as unchanged or even improved. The semen direction is the only change for most patients.
+- **Orgasm will not feel different to the point of concern.** Most men report orgasm intensity as unchanged or even improved. The semen direction is the only change for most patients.
 - **You will not be on a catheter for weeks.** The catheter comes out within 24–48 hours for the vast majority of patients.
 
 ## What to do next

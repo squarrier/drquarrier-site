@@ -61,7 +61,3 @@ Two organizations directly benefit from donor support:
 **Prostate Enucleation Collaborative (PEC)** — [enucleate.org](https://enucleate.org/) — the surgical society dedicated to advancing prostate enucleation training. Donations directly translate into more patients having access to HoLEP-trained surgeons.
 
 Neither donation supports Dr. Quarrier personally. Both support the missions the work on this page represents.
-
-## What to do next
-
-To schedule a consu
