@@ -104,7 +104,7 @@ Most men feel substantially better within two weeks and "substantially healed" b
 
 - **Stream and urgency** improve progressively. By 4–6 weeks, the stream is typically the strongest it has been in many years, and urgency has largely subsided.
 - **Nocturia** (getting up at night) improves over the same window. Most men report fewer nighttime trips by week 6 than they had been having before surgery.
-- **Retrograde (dry) ejaculation** — this is a permanent change after HoLEP. It is not painful, does not affect orgasm intensity, and does not affect erectile function. It does affect fertility. Most men describe orgasm as essentially unchanged in pleasure; some report it more intense. The semen goes into the bladder rather than out, and exits with the next urination. This effect is universal enough that any HoLEP discussion should address it directly.
+- **Ejaculation becomes "dry" (retrograde ejaculation)** — it helps to be clear about what this does and does not mean, because sexual function is more than ejaculation. Your erections are not affected — the nerves that control them are not in the surgical field — and your orgasm feels the same; most men describe the sensation as unchanged, and some report it more intense. The single change is that at climax the semen travels backward into the bladder instead of out, so little or nothing comes out in the moment. This is harmless and not painful — the fluid simply leaves the next time you urinate. The change is usually permanent and does reduce fertility, so men who may want to father children should raise that before surgery. For the great majority of men, erections, orgasm, and sexual satisfaction are unchanged.
 - **Erectile function** — the underlying nerves controlling erection are not in the surgical field. Erectile function is preserved in most men. The published long-term head-to-head data for HoLEP vs. other procedures show HoLEP performs as well as or better than alternatives on long-term erectile preservation.
 - **Activity restrictions** — no heavy lifting (over ~15 lb) and no intense exercise for 4–6 weeks. Avoid bicycling, lawn mowing, and riding mowers or tractors for 6 weeks — the pelvic vibration can trigger bleeding. Walking and stretching are encouraged. Most men can return to a desk job within 1–2 weeks; physical jobs typically require 4–6 weeks.
 - **Resumption of sex** — typically 4-6 weeks, with surgeon clearance. Some men resume sooner.
@@ -142,7 +142,7 @@ HoLEP does not cause erectile dysfunction in most men. Erectile function is pres
 Almost certainly not. HoLEP retreatment rates are near zero at 5 and 7 years.
 
 **Will I still ejaculate?**
-You will still have orgasms, with normal or near-normal sensation. The semen will go into the bladder rather than out — this is called retrograde ejaculation, and it is permanent. It affects fertility but not pleasure.
+You will still have erections and orgasms, and the sensation is normal or near-normal. The one change is that the fluid travels backward into the bladder instead of out, so the orgasm is "dry" — little or nothing comes out in the moment, and it passes harmlessly the next time you urinate. This is called retrograde ejaculation. It is usually permanent and reduces fertility, but it does not affect your ability to get an erection, to reach orgasm, or to enjoy sex.
 
 **How big is too big for HoLEP?**
 There is no upper limit imposed by the procedure. HoLEP routinely handles prostates from 30 grams to over 300 grams.

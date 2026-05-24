@@ -101,7 +101,7 @@ Very unlikely. HoLEP does not directly affect the nerves that control erection. 
 
 ### What is retrograde ejaculation?
 
-When semen goes backward into the bladder rather than out through the penis during orgasm. After HoLEP, this happens in roughly 75% of men, and it is permanent. Orgasm sensation is essentially unchanged — most men report it the same or even more intense — but the semen exits invisibly with the next urination. The change does not cause harm. It does affect fertility.
+First, the reassuring part: sexual function has two components — erections and orgasm — and HoLEP leaves both intact. Retrograde ejaculation refers only to where the fluid goes. At orgasm, the semen travels backward into the bladder instead of out through the penis, so the climax is "dry" — little or nothing comes out, and it leaves harmlessly with the next urination. This happens in roughly 75% of men after HoLEP and is usually permanent. Erections are unaffected and orgasm sensation is essentially unchanged — most men report it the same or even more intense. The main practical consequence is reduced fertility, so men hoping to father children should discuss that before surgery.
 
 ### Will I be incontinent?
 
