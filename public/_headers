@@ -1,0 +1,11 @@
+# Security headers for all routes (honored by Cloudflare static asset serving).
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
+  X-Frame-Options: SAMEORIGIN
+  Permissions-Policy: geolocation=(), microphone=(), camera=()
+
+# Long-cache immutable hashed build assets.
+/_astro/*
+  Cache-Control: public, max-age=31536000, immutable

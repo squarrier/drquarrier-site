@@ -11,7 +11,7 @@ interface Props {
   schemaType?: 'Article' | 'MedicalProcedure' | 'MedicalCondition' | 'FAQPage' | 'WebPage';
   ogImage?: string;
 }
-const { title, description, schemaType = 'WebPage', ogImage = '/photos/headshot.png' } = Astro.props;
+const { title, description, schemaType = 'WebPage', ogImage = '/photos/headshot.jpg' } = Astro.props;
 const fullTitle = title.includes('Dr. Quarrier') || title.includes('Quarrier') ? title : `${title} | Dr. Scott Quarrier`;
 const canonical = new URL(Astro.url.pathname, SITE.domain).href.replace(/\/$/, '') || SITE.domain;
 const ogImageAbs = new URL(ogImage, SITE.domain).href;

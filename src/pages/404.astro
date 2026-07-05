@@ -1,0 +1,33 @@
+---
+import Base from '../layouts/Base.astro';
+import CallCTA from '../components/CallCTA.astro';
+import { MAIN_NAV, FOOTER_NAV } from '../consts';
+const desc = 'The page you were looking for could not be found. Here are the main pages of Dr. Scott Quarrier’s HoLEP site.';
+---
+<Base title="Page Not Found" description={desc} schemaType="WebPage">
+  <div class="page">
+    <div class="container prose">
+      <h1>Page not found</h1>
+      <p>
+        The page you were looking for isn’t here — it may have moved, or the link may
+        have a typo. Nothing is wrong on your end. Try one of the main pages below, or
+        call the office and we’ll help you directly.
+      </p>
+
+      <h2>Main pages</h2>
+      <ul>
+        {MAIN_NAV.map((item) => (
+          <li><a href={item.href}>{item.label}</a></li>
+        ))}
+      </ul>
+
+      <h2>More</h2>
+      <ul>
+        {FOOTER_NAV.map((item) => (
+          <li><a href={item.href}>{item.label}</a></li>
+        ))}
+      </ul>
+    </div>
+  </div>
+  <CallCTA sub="Calling does not commit you to surgery — it starts the conversation." />
+</Base>
