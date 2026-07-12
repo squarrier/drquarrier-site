@@ -58,9 +58,18 @@ Review every generated content change before committing it.
 
 ## Production deployment
 
-Pushing protected Forgejo `main` publishes the same commit to GitHub, but it does not currently deploy the website. Production is a Cloudflare Worker, not a Cloudflare Pages project. Automatic Cloudflare deployment requires a separate, reviewed build integration and a narrowly scoped deployment credential; source mirroring alone is never deployment authorization.
+Merging a reviewed Forgejo pull request into protected `main` starts the complete production path automatically:
 
-Deploy only from a clean, current `main` working tree:
+1. Forgejo push-mirrors only `main` to GitHub.
+2. Cloudflare Workers Builds detects the new GitHub `main` commit.
+3. Cloudflare runs `npm run build` and then `npx wrangler deploy`.
+4. The resulting static Worker is published to `drquarrier.com` and the `*.workers.dev` address.
+
+Cloudflare's production branch is `main`, the build variable `NODE_VERSION` is `22.12.0`, and non-production branch builds remain enabled for validation. Keep the Cloudflare build token narrowly scoped and managed by Cloudflare; never copy it into this repository.
+
+After each merge, confirm the same commit reached Forgejo, GitHub, and the Cloudflare build record. A successful build must report 13 generated pages and a completed deploy command.
+
+Use a manual deployment only as a recovery procedure when the automatic build service is unavailable. Deploy from a clean, current `main` working tree:
 
 ```powershell
 cd "C:\Workspaces\Claude\Projects\HoLEP-Site\site"
@@ -73,9 +82,9 @@ npm.cmd run build
 npx.cmd wrangler deploy
 ```
 
-Before deploying, verify that `git status --short` is empty and that the build succeeds. A successful changed deployment reports new or modified static assets.
+Before a manual deployment, verify that `git status --short` is empty and that the build succeeds. A successful changed deployment reports new or modified static assets.
 
-Cloudflare authentication is local operator state. Never commit `.env` files, API tokens, Wrangler credentials, SSH private keys, or other secrets.
+Manual Cloudflare authentication is local operator state. Never commit `.env` files, API tokens, Wrangler credentials, SSH private keys, or other secrets.
 
 ## Post-deployment checks
 
