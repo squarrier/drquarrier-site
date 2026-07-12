@@ -31,15 +31,11 @@ git push -u origin feature/<short-description>
 
 Open a pull request in Forgejo, review the rendered changes and build result, then merge into `main`.
 
-Forgejo does not currently mirror branches to GitHub automatically. After review and merge, sync only protected `main` from the trusted Windows working copy:
+Forgejo 15 automatically push-mirrors only protected `main` to GitHub using the repository-scoped, write-enabled SSH deploy key named `Forgejo main-only mirror`. `sync_on_commit` is enabled and the periodic fallback interval is eight hours.
 
-```powershell
-git switch main
-git pull --ff-only origin main
-git push github main
-```
+After a reviewed Forgejo pull request merges, confirm Forgejo's mirror status has no error and verify both remotes resolve `refs/heads/main` to the same commit. Do not manually push working branches to GitHub.
 
-Do not configure an all-branches push mirror: it would copy unreviewed agent working branches to the public GitHub repository. A future Forgejo upgrade may make a branch-filtered `main`-only mirror possible.
+The mirror branch filter must remain exactly `main`. Never broaden it or add an all-branches mirror: doing so would publish unreviewed agent branches. The GitHub deploy key must remain scoped to this repository only.
 
 Agents such as Hermes should push only agent-specific branches such as `hermes/<task-name>`. They must not force-push or push directly to `main`.
 
@@ -62,7 +58,7 @@ Review every generated content change before committing it.
 
 ## Production deployment
 
-Pushing to Forgejo or GitHub saves the source but does not currently deploy the website. Production is a Cloudflare Worker, not a Cloudflare Pages project.
+Pushing protected Forgejo `main` publishes the same commit to GitHub, but it does not currently deploy the website. Production is a Cloudflare Worker, not a Cloudflare Pages project. Automatic Cloudflare deployment requires a separate, reviewed build integration and a narrowly scoped deployment credential; source mirroring alone is never deployment authorization.
 
 Deploy only from a clean, current `main` working tree:
 
