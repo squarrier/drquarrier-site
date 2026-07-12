@@ -1,120 +1,94 @@
-# Deploying drquarrier.com
+# drquarrier.com development and deployment
 
-The site is a static Astro build. Recommended host: **Cloudflare Pages** (free, fast, automatic TLS, builds from GitHub on every push). You own `drquarrier.com` at GoDaddy; you keep the registration there and just point DNS at Cloudflare.
+This repository contains the Astro source for `https://drquarrier.com`.
 
-You should never need to run `npm install` locally — Cloudflare builds it in CI.
+## Source of truth
 
----
+- Primary repository: `http://192.168.0.11:3030/squarrier/drquarrier-site`
+- GitHub: downstream mirror of the protected `main` branch
+- Current Windows working copy: `C:\Workspaces\Claude\Projects\HoLEP-Site\site`
+- Production: Cloudflare Worker named `drquarrier-site`, serving the static `./dist` directory
 
-## 0. Prerequisite — get Git (one time)
+Do not edit or build from the retired OneDrive copy. Do not push directly to GitHub; Forgejo is the primary repository.
 
-`git` isn't installed yet (that's the "not recognized" error). Two options:
+## Normal development workflow
 
-- **GitHub Desktop (recommended — no command line):** download from desktop.github.com, install, sign in with a free GitHub account. It bundles Git and handles everything with a GUI. Then use the "GitHub Desktop path" below instead of the terminal commands.
-- **Git CLI:** download from git-scm.com/download/win, install with defaults, then **close and reopen PowerShell** so it's on your PATH. The terminal commands below will then work.
+Start from an up-to-date `main` and work on a short-lived branch:
 
-### GitHub Desktop path (easiest)
+```powershell
+cd "C:\Workspaces\Claude\Projects\HoLEP-Site\site"
+git switch main
+git pull --ff-only origin main
+git switch -c feature/<short-description>
 
-1. Install GitHub Desktop, sign in.
-2. **File → Add local repository →** browse to `C:\Users\squar\OneDrive\Documents\Claude\Projects\HoLEP-Site\site`. It'll say "this isn't a Git repository — create one?" → **Create a repository** → Create.
-3. It shows all the files as the first commit. Add a summary like "Initial site" → **Commit to main**.
-4. Click **Publish repository** → name it `drquarrier-site`, keep **"Keep this code private"** checked → Publish.
-5. Skip to **section 2** (Cloudflare Pages) — your repo is now on GitHub.
+npm.cmd ci
+npm.cmd run build
 
-> Note: GitHub Desktop respects the `.gitignore`, so `node_modules/` and `dist/` are excluded automatically.
-
-## 1. (Git CLI alternative) Put `site/` in a GitHub repo
-
-The repo should contain the **contents of `site/`** (this folder), not the whole HoLEP-Site project — that keeps your research notes, drafts, and citations private.
-
-After installing Git CLI and reopening PowerShell, from inside `site/`:
-
-```bash
-cd "C:\Users\squar\OneDrive\Documents\Claude\Projects\HoLEP-Site\site"
-git init
-git add .
-git commit -m "Initial commit: drquarrier.com Astro site"
+git add <files>
+git commit -m "Describe the change"
+git push -u origin feature/<short-description>
 ```
 
-`.gitignore` already excludes `node_modules/`, `dist/`, and `.astro/`, so only source gets committed.
+Open a pull request in Forgejo, review the rendered changes and build result, then merge into `main`. The Forgejo push mirror copies `main` to GitHub.
 
-Then create an empty repo on GitHub (e.g., `drquarrier-site`, private is fine — Cloudflare can read private repos) and push:
+Agents such as Hermes should push only agent-specific branches such as `hermes/<task-name>`. They must not force-push or push directly to `main`.
 
-```bash
-git remote add origin https://github.com/<your-username>/drquarrier-site.git
-git branch -M main
-git push -u origin main
+## Local preview
+
+```powershell
+npm.cmd ci
+npm.cmd run dev
 ```
 
-> **OneDrive note:** this folder lives in OneDrive. Git works fine there, but pause OneDrive sync while running `git`/`npm` if you ever see file-lock errors. (You don't need `npm install` locally for deployment.)
+Astro serves the preview at `http://localhost:4321` by default.
 
----
+To regenerate content from the parent project's drafts:
 
-## 2. Connect Cloudflare Pages
-
-1. Create a free account at dash.cloudflare.com.
-2. **Workers & Pages → Create → Pages → Connect to Git** → authorize GitHub → pick `drquarrier-site`.
-3. Build settings:
-   - **Framework preset:** Astro
-   - **Build command:** `npm run build`
-   - **Build output directory:** `dist`
-   - **Root directory:** `/` (leave default — the repo root *is* the site)
-   - **Environment variable:** add `NODE_VERSION` = `20` (or `22`)
-4. **Save and Deploy.** First build takes ~1–2 minutes. You'll get a `*.pages.dev` preview URL — open it and confirm the site renders.
-
-Every `git push` to `main` redeploys automatically.
-
----
-
-## 3. Point drquarrier.com at Cloudflare
-
-Cloudflare Pages serves the custom domain through Cloudflare DNS, so move DNS to Cloudflare (keep the registration at GoDaddy):
-
-1. In Cloudflare: **Add a site → `drquarrier.com` → Free plan.** Cloudflare scans existing DNS and shows you **two nameservers** (like `xxx.ns.cloudflare.com`).
-2. In GoDaddy: **My Products → drquarrier.com → DNS → Nameservers → Change → Enter my own nameservers** → paste the two Cloudflare nameservers → save. Propagation is usually under an hour.
-3. Back in Cloudflare Pages → your project → **Custom domains → Set up a custom domain** → add `drquarrier.com` and `www.drquarrier.com`. TLS certificates issue automatically.
-4. Add a redirect so `www` → apex (or apex → www, your choice) in Pages settings.
-
-Optional later: transfer the registration from GoDaddy to Cloudflare Registrar for at-cost renewals. Not required.
-
----
-
-## 4. After it's live — verify
-
-- Visit `https://drquarrier.com` and click through all pages, the symptom-check tool, and the BPH 101 video on `/holep`.
-- `https://drquarrier.com/robots.txt`, `/ai.txt`, `/sitemap.xml` all load.
-- Google Rich Results Test (search.google.com/test/rich-results) on `/` and `/faq` — confirm Physician + FAQ results.
-- Submit the site to **Google Search Console** (add property, verify via DNS TXT in Cloudflare, submit sitemap.xml).
-- Work through `../AI-Discoverability/audit.md` — directory listings + Google Business Profile.
-
----
-
-## Local preview (optional)
-
-If you want to preview before pushing:
-
-```bash
-cd site
-npm install      # one time; pause OneDrive sync first to avoid file locks
-npm run dev       # http://localhost:4321
+```powershell
+node scripts/clean-content.mjs
 ```
 
-To rebuild content after editing the markdown in `../Content-Drafts/`:
+Review every generated content change before committing it.
 
-```bash
-node scripts/clean-content.mjs   # regenerates src/content/pages/*.md
+## Production deployment
+
+Pushing to Forgejo or GitHub saves the source but does not currently deploy the website. Production is a Cloudflare Worker, not a Cloudflare Pages project.
+
+Deploy only from a clean, current `main` working tree:
+
+```powershell
+cd "C:\Workspaces\Claude\Projects\HoLEP-Site\site"
+git switch main
+git pull --ff-only origin main
+git status --short
+
+npm.cmd ci
+npm.cmd run build
+npx.cmd wrangler deploy
 ```
 
----
+Before deploying, verify that `git status --short` is empty and that the build succeeds. A successful changed deployment reports new or modified static assets.
 
-## What's in the build
+Cloudflare authentication is local operator state. Never commit `.env` files, API tokens, Wrangler credentials, SSH private keys, or other secrets.
 
-- 12 pages: landing, /holep (with embedded BPH 101 video), /why-holep, /early-intervention, /recovery, /symptom-check (IPSS tool), /research, /faq (FAQ rich-results markup), /fellowship, /already-in-retention, /traveling-to-urmc, /for-providers.
-- Schema.org JSON-LD on every page (Physician + aggregateRating 4.7/703, MedicalBusiness, WebSite, per-page type); FAQPage markup on /faq.
-- robots.txt + ai.txt (permissive AI crawlers), sitemap.xml.
-- Photos in /photos. No tracking, no cookies, no PHI collected.
+## Post-deployment checks
 
-## Still to wire in
+- Visit `https://drquarrier.com` and check all primary navigation links.
+- Test `/holep`, `/symptom-check`, `/faq`, and `/404` behavior.
+- Verify `/robots.txt`, `/ai.txt`, and `/sitemap.xml`.
+- Check the `*.workers.dev` URL first when diagnosing edge-cache differences.
+- If necessary, purge the affected URLs from Cloudflare's cache.
 
-- **Google Scholar URL** — once provided, add to `src/consts.ts`, the `/research` page, and the `sameAs` array in `src/components/Schema.astro`.
-- **Favicon** — currently a placeholder navy "Q" mark (`public/favicon.svg`); swap for a real mark if desired.
+## AI crawler settings
+
+The permissive `public/robots.txt` and `public/ai.txt` are intentional. If Cloudflare injects a managed block for GPTBot, ClaudeBot, or Google-Extended, change the setting in the `drquarrier.com` Cloudflare zone under AI Crawl Control. That behavior is controlled by Cloudflare, not this repository.
+
+## Windows troubleshooting
+
+- Use `npm.cmd` and `npx.cmd` if PowerShell blocks the script shims.
+- If Rollup reports `ERR_MODULE_NOT_FOUND` for an optional dependency, remove `node_modules`, then run `npm.cmd ci` again.
+- Do not use the retired OneDrive or `C:\Claude` copies as working trees.
+
+## Repository contents
+
+The repository contains only the deployable website source. Research notes, drafts, citations, credentials, and private Hermes state belong outside this repository.
