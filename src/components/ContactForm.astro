@@ -1,7 +1,8 @@
 ---
 // Teaching/fellowship inquiry form. Submits to Web3Forms via AJAX (no page reload).
 // No PHI is collected — this is for professional inquiries only (referrals go to /for-providers).
-// The recipient email lives in the Web3Forms access key (server-side); it is never exposed here.
+// Web3Forms access keys are intentionally public client-side identifiers, not secret API keys.
+// Keep abuse controls (honeypot, provider rate limits, and optional domain restriction) enabled.
 const ACCESS_KEY = 'b97915c7-59be-4b0d-815e-b15d82eaf885';
 ---
 <section id="cf" aria-labelledby="cf-h">

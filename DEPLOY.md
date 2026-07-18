@@ -94,6 +94,10 @@ Manual Cloudflare authentication is local operator state. Never commit `.env` fi
 - Check the `*.workers.dev` URL first when diagnosing edge-cache differences.
 - If necessary, purge the affected URLs from Cloudflare's cache.
 
+## Contact form security
+
+`src/components/ContactForm.astro` posts directly from the browser to Web3Forms. Its access key is intentionally client-visible and is not a secret API credential; Web3Forms expects this API to run client-side. The form uses a honeypot and provider-side rate limiting. If spam becomes material, enable Web3Forms domain restriction or CAPTCHA in the provider dashboard; domain restriction is a paid feature. Do not move the current request behind a Worker proxy unless Web3Forms server-side access has been explicitly enabled for the account.
+
 ## AI crawler settings
 
 The permissive `public/robots.txt` and `public/ai.txt` are intentional. If Cloudflare injects a managed block for GPTBot, ClaudeBot, or Google-Extended, change the setting in the `drquarrier.com` Cloudflare zone under AI Crawl Control. That behavior is controlled by Cloudflare, not this repository.
