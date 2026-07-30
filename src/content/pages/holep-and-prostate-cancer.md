@@ -65,7 +65,13 @@ For selected men, HoLEP before radiation can:
 
 The direct evidence is small but reassuring. In an 18-patient series, median prostate volume fell from 107 mL before HoLEP to 24 mL afterward, urinary symptoms improved, and subsequent external-beam radiation produced no grade 3 or higher acute or late urinary toxicity during median 18-month follow-up.[^4] A later 24-patient series found generally low incontinence burden and high urinary quality of life after radiation; one patient developed a bladder-neck contracture.[^5]
 
-This should not be translated into “everyone needs HoLEP before radiation.” Reviews emphasize that the evidence is retrospective and limited, while older TURP literature raises concern for urinary toxicity after transurethral surgery. The decision depends on symptom severity, retention, prostate size, anatomy, radiation type, cancer risk, and the time available for healing.[^6]
+### A possible radiation-planning advantage
+
+A University of Rochester radiation-planning study led by Zhu and colleagues examined **why** HoLEP before radiation might matter. The researchers created the same hypothetical external-beam radiation plan on pelvic CT scans obtained before and after HoLEP. Among eight men with prostates larger than 80 mL who met the strict imaging criteria, median prostate volume fell from 118.4 mL to 34.6 mL. The median volume of bladder receiving the full 70-Gy dose fell from 27.3 mL to 14.5 mL—about 47%—while measured rectal exposure did not change significantly.[^6]
+
+This is useful mechanistic evidence, but it is **not yet evidence that HoLEP reduces urinary side effects from radiation**. The study was a retrospective, eight-patient planning exercise using hypothetical radiation plans; the patients did not receive those paired plans, and clinical toxicity was not measured. The work was presented at the 2025 World Congress of Endourology and Uro-Technology, and a full manuscript has been accepted by the *Canadian Urological Association Journal* but is not yet publicly indexed.
+
+This should not be translated into “everyone needs HoLEP before radiation.” Reviews emphasize that the evidence is retrospective and limited, while older TURP literature raises concern for urinary toxicity after transurethral surgery. The decision depends on symptom severity, retention, prostate size, anatomy, radiation type, cancer risk, and the time available for healing.[^7]
 
 > **Practical rule:** significant obstruction deserves a deliberate plan **before** radiation starts. Sometimes that plan is HoLEP; sometimes medication, hormone therapy, catheter management, or proceeding directly to radiation is better.
 
@@ -73,13 +79,13 @@ This should not be translated into “everyone needs HoLEP before radiation.” 
 
 HoLEP does not close the door to future prostate cancer treatment. Radiation, radical prostatectomy, and selected focal therapies have all been performed after HoLEP.
 
-But the options are not identical. A 2025 systematic review of 22 studies found that radical prostatectomy after HoLEP had similar cancer-pathology and erectile-function outcomes to prostatectomy without prior BPH surgery, but more intraoperative complications, more leakage at the bladder-to-urethra connection, and lower postoperative continence.[^7] These studies were mostly small, retrospective, and at moderate or high risk of bias, but the signal is important for counseling.
+But the options are not identical. A 2025 systematic review of 22 studies found that radical prostatectomy after HoLEP had similar cancer-pathology and erectile-function outcomes to prostatectomy without prior BPH surgery, but more intraoperative complications, more leakage at the bladder-to-urethra connection, and lower postoperative continence.[^8] These studies were mostly small, retrospective, and at moderate or high risk of bias, but the signal is important for counseling.
 
 If radical prostatectomy is the likely cancer treatment, doing HoLEP first usually adds an operation without a clear benefit. If surveillance or radiation is the plan, HoLEP may have a more useful role.
 
 ## What if cancer is found in the HoLEP specimen?
 
-Incidental prostate cancer is found in roughly 5–13% of contemporary HoLEP series, and most detected cancers are low volume and Grade Group 1.[^8] The tissue result is useful, but it samples mainly the transition zone—not the entire prostate.
+Incidental prostate cancer is found in roughly 5–13% of contemporary HoLEP series, and most detected cancers are low volume and Grade Group 1.[^9] The tissue result is useful, but it samples mainly the transition zone—not the entire prostate.
 
 The next step may be surveillance, MRI, biopsy of the remaining prostate, radiation, or surgery. The decision depends on:
 
@@ -105,7 +111,14 @@ The next step may be surveillance, MRI, biopsy of the remaining prostate, radiat
 
 The best sequence is a coordinated decision between a HoLEP-experienced urologist and the prostate-cancer team.
 
-To discuss how HoLEP might fit your situation, call UR Medicine Urology at **(585) 275-2838**.
+If you are balancing prostate-cancer surveillance or radiation with significant urinary obstruction, **schedule a discussion with Dr. Scott Quarrier** about whether HoLEP belongs in the sequence of your care. Bring your PSA history, biopsy or pathology report, prostate MRI, and proposed cancer-treatment plan if available. Call **(585) 275-2838** and ask to schedule with Dr. Quarrier.
+
+## Related guides
+
+- [How HoLEP works and who it is for](/holep)
+- [Why choose HoLEP over other BPH procedures?](/why-holep)
+- [What recovery looks like after HoLEP](/recovery)
+- [Frequently asked questions](/faq)
 
 ## References
 
@@ -119,8 +132,10 @@ To discuss how HoLEP might fit your situation, call UR Medicine Urology at **(58
 
 [^5]: Wajswol E, Crompton DJ, Igel T, Attia A, Dora C. Functional outcomes following external beam radiation therapy for patients with prior holmium laser enucleation of the prostate. *World J Urol.* 2024;42:504. [PMID: 39230728](https://pubmed.ncbi.nlm.nih.gov/39230728/) · [DOI: 10.1007/s00345-024-05220-w](https://doi.org/10.1007/s00345-024-05220-w).
 
-[^6]: Elsaqa M, El Tayeb MM. The Role of Transurethral BPH Surgeries in Management of Urinary Symptoms in Prostate Cancer Patients, Narrative Review. *Curr Urol Rep.* 2024;26:7. [PMID: 39352587](https://pubmed.ncbi.nlm.nih.gov/39352587/) · [DOI: 10.1007/s11934-024-01229-1](https://doi.org/10.1007/s11934-024-01229-1). Review notes low-quality retrospective evidence and controversy in the pre-radiation setting.
+[^6]: Zhu D, Rivais W, Huang D, et al. BS02: 09 Shrinking the Target: How HoLEP Reduces Bladder Radiation in Prostate Cancer Radiotherapy. *J Endourol.* 2025;39(3 suppl):e14. [DOI: 10.1177/08927790251368714](https://doi.org/10.1177/08927790251368714). Conference abstract; eight-patient retrospective hypothetical radiation-planning study, not a clinical-toxicity study. A full manuscript was reported accepted by the *Canadian Urological Association Journal* in April 2026 but was not yet publicly indexed when this page was prepared.
 
-[^7]: Artiles Medina A, Tagalos Muñoz A, Domínguez Gutiérrez A, et al. Outcomes of Active Treatment for Localised Prostate Cancer After Holmium Laser Enucleation of the Prostate: A Systematic Review and Meta-analysis. *Eur Urol Open Sci.* 2025;79:111-127. [PMID: 40837058](https://pubmed.ncbi.nlm.nih.gov/40837058/) · [DOI: 10.1016/j.euros.2025.07.011](https://doi.org/10.1016/j.euros.2025.07.011).
+[^7]: Elsaqa M, El Tayeb MM. The Role of Transurethral BPH Surgeries in Management of Urinary Symptoms in Prostate Cancer Patients, Narrative Review. *Curr Urol Rep.* 2024;26:7. [PMID: 39352587](https://pubmed.ncbi.nlm.nih.gov/39352587/) · [DOI: 10.1007/s11934-024-01229-1](https://doi.org/10.1007/s11934-024-01229-1). Review notes low-quality retrospective evidence and controversy in the pre-radiation setting.
 
-[^8]: Han JH, Chung DH, Cho MC, et al. Natural history of incidentally diagnosed prostate cancer after holmium laser enucleation of the prostate. *PLOS ONE.* 2023;18:e0278931. [PMID: 36730281](https://pubmed.ncbi.nlm.nih.gov/36730281/) · [DOI: 10.1371/journal.pone.0278931](https://doi.org/10.1371/journal.pone.0278931). In this 2630-patient cohort, 5.4% had incidental cancer; 80% initially chose active surveillance.
+[^8]: Artiles Medina A, Tagalos Muñoz A, Domínguez Gutiérrez A, et al. Outcomes of Active Treatment for Localised Prostate Cancer After Holmium Laser Enucleation of the Prostate: A Systematic Review and Meta-analysis. *Eur Urol Open Sci.* 2025;79:111-127. [PMID: 40837058](https://pubmed.ncbi.nlm.nih.gov/40837058/) · [DOI: 10.1016/j.euros.2025.07.011](https://doi.org/10.1016/j.euros.2025.07.011).
+
+[^9]: Han JH, Chung DH, Cho MC, et al. Natural history of incidentally diagnosed prostate cancer after holmium laser enucleation of the prostate. *PLOS ONE.* 2023;18:e0278931. [PMID: 36730281](https://pubmed.ncbi.nlm.nih.gov/36730281/) · [DOI: 10.1371/journal.pone.0278931](https://doi.org/10.1371/journal.pone.0278931). In this 2630-patient cohort, 5.4% had incidental cancer; 80% initially chose active surveillance.

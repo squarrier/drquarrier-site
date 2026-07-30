@@ -1,6 +1,6 @@
 ---
 title: "Research"
-description: "Dr. Quarrier's research on teaching HoLEP, patient-reported outcomes, equity in BPH care, and improving the patient experience."
+description: "Dr. Quarrier's research on teaching HoLEP, patient-reported outcomes, prostate-cancer treatment planning, equity in BPH care, and improving the patient experience."
 schemaType: Article
 ---
 # Research
@@ -22,6 +22,12 @@ BPH is a quality-of-life disease. What matters isn't a number on a flow machine 
 This line of work includes "Defining the Drip," a systematic review that pushed the field toward measuring post-HoLEP continence rigorously and consistently, and work distributing the standard symptom questionnaire (the IPSS) through the patient portal so every visit starts with your own current report. In one study of 266 men followed through the year after HoLEP (Campbell et al., *Journal of Endourology*, 2024), patients who came in *with* incontinence — which is most often the urgent, can't-hold-it type — had a significant improvement in that incontinence by one year. The takeaway for patients: pre-existing leakage, especially urge-related leakage, is not a reason to expect a poor result from HoLEP, and is often something the operation helps.
 
 **What this means for you:** your results are tracked against what you report, and the conversation about whether the operation worked starts from your experience, not a chart value.
+
+## When BPH and prostate cancer overlap
+
+Men can have both prostate-cancer treatment decisions and severe benign obstruction. Dr. Quarrier's group works with UR Medicine Radiation Oncology to study how relieving that obstruction with HoLEP may affect later treatment planning. In a 2025 World Congress abstract, hypothetical radiation plans were created on CT scans obtained before and after HoLEP in eight men with very large prostates. Median prostate volume fell from 118.4 mL to 34.6 mL, and the median bladder volume receiving the full 70-Gy dose fell from 27.3 mL to 14.5 mL. Rectal exposure did not change significantly. A full manuscript has been accepted by the *Canadian Urological Association Journal*.
+
+This is an encouraging planning result, not proof that HoLEP prevents radiation side effects: the study was small, retrospective, and did not compare actual clinical toxicity. It adds a reason to study coordinated HoLEP and radiation sequencing more carefully. Read [Can I have HoLEP if I have prostate cancer?](/holep-and-prostate-cancer) for the broader evidence and decision framework.
 
 ## Equity in BPH care
 
