@@ -67,11 +67,11 @@ For selected men, HoLEP before radiation can:
 
 The direct evidence is small but reassuring. In an 18-patient series, median prostate volume fell from 107 mL before HoLEP to 24 mL afterward, urinary symptoms improved, and subsequent external-beam radiation produced no grade 3 or higher acute or late urinary toxicity during median 18-month follow-up.[^4] A later 24-patient series found generally low incontinence burden and high urinary quality of life after radiation; one patient developed a bladder-neck contracture.[^5]
 
-### A possible radiation-planning advantage
+### Could HoLEP reduce radiation to healthy tissue?
 
-A University of Rochester radiation-planning study led by Zhu and colleagues examined **why** HoLEP before radiation might matter. The researchers created the same hypothetical external-beam radiation plan on pelvic CT scans obtained before and after HoLEP. Among eight men with prostates larger than 80 mL who met the strict imaging criteria, median prostate volume fell from 118.4 mL to 34.6 mL. The median volume of bladder receiving the full 70-Gy dose fell from 27.3 mL to 14.5 mL—about 47%—while measured rectal exposure did not change significantly.[^6]
+We conducted a small study to estimate how HoLEP might change radiation exposure. Using CT scans from eight men with very large prostates, we created hypothetical radiation plans before and after HoLEP. The **median volume of bladder receiving the full dose of radiation decreased by 47%** after HoLEP, while rectal exposure did not change significantly.[^6]
 
-This is useful mechanistic evidence, but it is **not yet evidence that HoLEP reduces urinary side effects from radiation**. The study was a retrospective, eight-patient planning exercise using hypothetical radiation plans; the patients did not receive those paired plans, and clinical toxicity was not measured. The work was presented at the 2025 World Congress of Endourology and Uro-Technology, and a full manuscript has been accepted by the *Canadian Urological Association Journal* but is not yet publicly indexed.
+This suggests that HoLEP may reduce radiation delivered to healthy bladder tissue. The benefit remains theoretical: the study modeled radiation plans and did not test whether patients experienced fewer side effects. A full manuscript has been accepted by the *Canadian Urological Association Journal*.
 
 This should not be translated into “everyone needs HoLEP before radiation.” Reviews emphasize that the evidence is retrospective and limited, while older TURP literature raises concern for urinary toxicity after transurethral surgery. The decision depends on symptom severity, retention, prostate size, anatomy, radiation type, cancer risk, and the time available for healing.[^7]
 
