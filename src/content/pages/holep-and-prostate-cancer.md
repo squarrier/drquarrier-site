@@ -5,6 +5,8 @@ schemaType: Article
 ---
 # Can I Have HoLEP If I Have Prostate Cancer?
 
+[← Back to the HoLEP overview](/holep)
+
 > **Short answer: often, yes.** HoLEP treats the **benign prostate enlargement that blocks urination**; it does **not** treat prostate cancer. It can be a reasonable way to relieve obstruction while you remain on active surveillance, or before radiation in selected men. The sequence should be planned jointly by the HoLEP surgeon and the clinician treating the cancer.
 
 ## Two problems in the same prostate
@@ -111,7 +113,7 @@ The next step may be surveillance, MRI, biopsy of the remaining prostate, radiat
 
 The best sequence is a coordinated decision between a HoLEP-experienced urologist and the prostate-cancer team.
 
-If you are balancing prostate-cancer surveillance or radiation with significant urinary obstruction, **schedule a discussion with Dr. Scott Quarrier** about whether HoLEP belongs in the sequence of your care. Bring your PSA history, biopsy or pathology report, prostate MRI, and proposed cancer-treatment plan if available. Call **(585) 275-2838** and ask to schedule with Dr. Quarrier.
+If you are balancing prostate-cancer surveillance or radiation with significant urinary obstruction, **schedule a discussion with Dr. Scott Quarrier** about whether HoLEP belongs in the sequence of your care. Bring your PSA history, biopsy or pathology report, prostate MRI, and proposed cancer-treatment plan if available. [Call (585) 275-2838](tel:5852752838) and ask to schedule with Dr. Quarrier.
 
 ## Related guides
 
@@ -119,6 +121,7 @@ If you are balancing prostate-cancer surveillance or radiation with significant 
 - [Why choose HoLEP over other BPH procedures?](/why-holep)
 - [What recovery looks like after HoLEP](/recovery)
 - [Frequently asked questions](/faq)
+- [Research at UR Medicine](/research)
 
 ## References
 
