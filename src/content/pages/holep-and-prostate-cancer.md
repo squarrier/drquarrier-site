@@ -71,7 +71,7 @@ The direct evidence is small but reassuring. In an 18-patient series, median pro
 
 We conducted a small study to estimate how HoLEP might change radiation exposure. Using CT scans from eight men with very large prostates, we created hypothetical radiation plans before and after HoLEP. The **median volume of bladder receiving the full dose of radiation decreased by 47%** after HoLEP, while rectal exposure did not change significantly.[^6]
 
-This suggests that HoLEP may reduce radiation delivered to healthy bladder tissue. The benefit remains theoretical: the study modeled radiation plans and did not test whether patients experienced fewer side effects. A full manuscript has been accepted by the *Canadian Urological Association Journal*.
+This suggests that HoLEP may reduce radiation delivered to healthy bladder tissue. The benefit remains theoretical: the study modeled radiation plans and did not test whether patients experienced fewer side effects.
 
 This should not be translated into “everyone needs HoLEP before radiation.” Reviews emphasize that the evidence is retrospective and limited, while older TURP literature raises concern for urinary toxicity after transurethral surgery. The decision depends on symptom severity, retention, prostate size, anatomy, radiation type, cancer risk, and the time available for healing.[^7]
 
@@ -135,7 +135,7 @@ If you are balancing prostate-cancer surveillance or radiation with significant 
 
 [^5]: Wajswol E, Crompton DJ, Igel T, Attia A, Dora C. Functional outcomes following external beam radiation therapy for patients with prior holmium laser enucleation of the prostate. *World J Urol.* 2024;42:504. [PMID: 39230728](https://pubmed.ncbi.nlm.nih.gov/39230728/) · [DOI: 10.1007/s00345-024-05220-w](https://doi.org/10.1007/s00345-024-05220-w).
 
-[^6]: Zhu D, Rivais W, Huang D, et al. BS02: 09 Shrinking the Target: How HoLEP Reduces Bladder Radiation in Prostate Cancer Radiotherapy. *J Endourol.* 2025;39(3 suppl):e14. [DOI: 10.1177/08927790251368714](https://doi.org/10.1177/08927790251368714). Conference abstract; eight-patient retrospective hypothetical radiation-planning study, not a clinical-toxicity study. A full manuscript was reported accepted by the *Canadian Urological Association Journal* in April 2026 but was not yet publicly indexed when this page was prepared.
+[^6]: Zhu D, Rivais W, Huang D, et al. BS02: 09 Shrinking the Target: How HoLEP Reduces Bladder Radiation in Prostate Cancer Radiotherapy. *J Endourol.* 2025;39(3 suppl):e14. [DOI: 10.1177/08927790251368714](https://doi.org/10.1177/08927790251368714). Conference abstract; eight-patient retrospective hypothetical radiation-planning study, not a clinical-toxicity study.
 
 [^7]: Elsaqa M, El Tayeb MM. The Role of Transurethral BPH Surgeries in Management of Urinary Symptoms in Prostate Cancer Patients, Narrative Review. *Curr Urol Rep.* 2024;26:7. [PMID: 39352587](https://pubmed.ncbi.nlm.nih.gov/39352587/) · [DOI: 10.1007/s11934-024-01229-1](https://doi.org/10.1007/s11934-024-01229-1). Review notes low-quality retrospective evidence and controversy in the pre-radiation setting.
 

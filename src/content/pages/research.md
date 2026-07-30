@@ -25,7 +25,7 @@ This line of work includes "Defining the Drip," a systematic review that pushed 
 
 ## When BPH and prostate cancer overlap
 
-Men can have both prostate-cancer treatment decisions and severe benign obstruction. We conducted a small study with UR Medicine Radiation Oncology to estimate whether relieving that obstruction with HoLEP might reduce radiation to healthy tissue. Using CT scans from eight men with very large prostates, we created hypothetical radiation plans before and after HoLEP. The median volume of bladder receiving the full dose of radiation decreased by 47%, while rectal exposure did not change significantly. A full manuscript has been accepted by the *Canadian Urological Association Journal*.
+Men can have both prostate-cancer treatment decisions and severe benign obstruction. We conducted a small study with UR Medicine Radiation Oncology to estimate whether relieving that obstruction with HoLEP might reduce radiation to healthy tissue. Using CT scans from eight men with very large prostates, we created hypothetical radiation plans before and after HoLEP. The median volume of bladder receiving the full dose of radiation decreased by 47%, while rectal exposure did not change significantly.
 
 This is an encouraging planning result, not proof that HoLEP prevents radiation side effects: the study was small, retrospective, and did not compare actual clinical toxicity. It adds a reason to study coordinated HoLEP and radiation sequencing more carefully. Read [Can I have HoLEP if I have prostate cancer?](/holep-and-prostate-cancer) for the broader evidence and decision framework.
 
