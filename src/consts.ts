@@ -34,6 +34,7 @@ export const MAIN_NAV: { label: string; href: string }[] = [
 
 // Footer secondary links (entry/logistics/colleague pages not in the top nav).
 export const FOOTER_NAV: { label: string; href: string }[] = [
+  { label: 'HoLEP and prostate cancer', href: '/holep-and-prostate-cancer' },
   { label: 'Already in retention?', href: '/already-in-retention' },
   { label: 'Traveling to Rochester', href: '/traveling-to-urmc' },
   { label: 'Refer a patient', href: '/for-providers' },

@@ -69,7 +69,7 @@ Yes — and you are exactly the patient HoLEP serves well. Men in urinary retent
 
 ### What if I have prostate cancer?
 
-If active prostate cancer requires treatment first, HoLEP can be discussed afterward. If prostate cancer is identified on the HoLEP specimen (about 10% of cases — sometimes called "incidental T1a or T1b cancer"), the management plan is discussed at follow-up. Often no further treatment beyond monitoring is needed.
+Prostate cancer does not automatically rule out HoLEP. HoLEP treats benign obstruction—not the cancer—and can be considered while selected men remain on active surveillance or before planned radiation. If radical prostatectomy is likely, HoLEP is usually not a useful first step. If cancer is identified in the HoLEP specimen (about 5–13% in published series), the grade, amount of cancer, postoperative PSA, MRI, and sometimes biopsy of the remaining prostate determine what comes next. See [Can I have HoLEP if I have prostate cancer?](/holep-and-prostate-cancer) for the evidence and decision framework.
 
 ---
 
@@ -212,4 +212,5 @@ For specific topics, see:
 - [How HoLEP compares to other BPH procedures](/why-holep)
 - [Why earlier is usually better — the case for not waiting](/early-intervention)
 - [What recovery actually looks like, week by week](/recovery)
+- [How HoLEP can fit with prostate cancer surveillance or radiation](/holep-and-prostate-cancer)
 - [Research at UR Medicine](/research)
