@@ -22,20 +22,20 @@ export const SITE = {
 
 // Main (top) navigation — patient pages + Fellowship (per Scott: other MDs use it).
 export const MAIN_NAV: { label: string; href: string }[] = [
-  { label: 'HoLEP', href: '/holep' },
-  { label: 'Why HoLEP', href: '/why-holep' },
-  { label: 'Why Not Wait', href: '/early-intervention' },
-  { label: 'Recovery', href: '/recovery' },
-  { label: 'Symptom Check', href: '/symptom-check' },
-  { label: 'Research', href: '/research' },
-  { label: 'FAQ', href: '/faq' },
-  { label: 'Teaching', href: '/fellowship' },
+  { label: 'HoLEP', href: '/holep/' },
+  { label: 'Why HoLEP', href: '/why-holep/' },
+  { label: 'Why Not Wait', href: '/early-intervention/' },
+  { label: 'Recovery', href: '/recovery/' },
+  { label: 'Symptom Check', href: '/symptom-check/' },
+  { label: 'Research', href: '/research/' },
+  { label: 'FAQ', href: '/faq/' },
+  { label: 'Teaching', href: '/fellowship/' },
 ];
 
 // Footer secondary links (entry/logistics/colleague pages not in the top nav).
 export const FOOTER_NAV: { label: string; href: string }[] = [
-  { label: 'HoLEP and prostate cancer', href: '/holep-and-prostate-cancer' },
-  { label: 'Already in retention?', href: '/already-in-retention' },
-  { label: 'Traveling to Rochester', href: '/traveling-to-urmc' },
-  { label: 'Refer a patient', href: '/for-providers' },
+  { label: 'HoLEP and prostate cancer', href: '/holep-and-prostate-cancer/' },
+  { label: 'Already in retention?', href: '/already-in-retention/' },
+  { label: 'Traveling to Rochester', href: '/traveling-to-urmc/' },
+  { label: 'Refer a patient', href: '/for-providers/' },
 ];

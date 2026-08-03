@@ -4,7 +4,7 @@ import CallCTA from '../components/CallCTA.astro';
 import { MAIN_NAV, FOOTER_NAV } from '../consts';
 const desc = 'The page you were looking for could not be found. Here are the main pages of Dr. Scott Quarrier’s HoLEP site.';
 ---
-<Base title="Page Not Found" description={desc} schemaType="WebPage">
+<Base title="Page Not Found" description={desc} schemaType="WebPage" noindex>
   <div class="page">
     <div class="container prose">
       <h1>Page not found</h1>

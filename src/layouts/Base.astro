@@ -10,10 +10,12 @@ interface Props {
   description: string;
   schemaType?: 'Article' | 'MedicalProcedure' | 'MedicalCondition' | 'FAQPage' | 'WebPage';
   ogImage?: string;
+  noindex?: boolean;
 }
-const { title, description, schemaType = 'WebPage', ogImage = '/photos/headshot.jpg' } = Astro.props;
+const { title, description, schemaType = 'WebPage', ogImage = '/photos/headshot.jpg', noindex = false } = Astro.props;
 const fullTitle = title.includes('Dr. Quarrier') || title.includes('Quarrier') ? title : `${title} | Dr. Scott Quarrier`;
-const canonical = new URL(Astro.url.pathname, SITE.domain).href.replace(/\/$/, '') || SITE.domain;
+const canonicalPath = Astro.url.pathname === '/' ? '/' : `${Astro.url.pathname.replace(/\/$/, '')}/`;
+const canonical = new URL(canonicalPath, SITE.domain).href;
 const ogImageAbs = new URL(ogImage, SITE.domain).href;
 ---
 <!doctype html>
@@ -23,6 +25,7 @@ const ogImageAbs = new URL(ogImage, SITE.domain).href;
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{fullTitle}</title>
     <meta name="description" content={description} />
+    {noindex && <meta name="robots" content="noindex, follow" />}
     <link rel="canonical" href={canonical} />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
 
