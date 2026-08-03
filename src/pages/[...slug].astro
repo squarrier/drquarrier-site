@@ -16,7 +16,8 @@ export async function getStaticPaths() {
 
 const { page } = Astro.props;
 const { Content } = await render(page);
-const canonical = new URL(Astro.url.pathname, SITE.domain).href.replace(/\/$/, '') || SITE.domain;
+const canonicalPath = Astro.url.pathname === '/' ? '/' : `${Astro.url.pathname.replace(/\/$/, '')}/`;
+const canonical = new URL(canonicalPath, SITE.domain).href;
 const isFaq = page.data.schemaType === 'FAQPage';
 const rawBody = isFaq ? (rawPages[`../content/pages/${page.id}.md`] ?? '') : '';
 ---

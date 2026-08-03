@@ -13,7 +13,7 @@ const activePath = path === '/holep-and-prostate-cancer' ? '/holep' : path;
     <ul class="nav-links" id="primary-nav">
       {MAIN_NAV.map((item) => (
         <li>
-          <a href={item.href} aria-current={activePath === item.href ? 'page' : undefined}>{item.label}</a>
+          <a href={item.href} aria-current={activePath === item.href.replace(/\/$/, '') ? 'page' : undefined}>{item.label}</a>
         </li>
       ))}
       <li><a class="nav-cta" href={SITE.phoneHref}>Call {SITE.phone}</a></li>
