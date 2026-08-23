@@ -73,6 +73,9 @@ blockquote p:last-child { margin-bottom: 0; }
 .prose th { background: var(--navy); color: #fff; font-family: var(--sans); font-weight: 600; }
 .prose tr:nth-child(even) td { background: var(--bg-soft); }
 .table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+@media (max-width: 640px) {
+  .prose table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+}
 
 /* video embed (lazy YouTube) */
 .video-embed { margin: 1.5rem 0; }

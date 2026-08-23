@@ -47,12 +47,13 @@ HoLEP works for essentially the full range of patients with surgical BPH:
 - **Men on blood thinners** — particularly antiplatelet agents and direct oral anticoagulants. HoLEP has a favorable bleeding profile in anticoagulated patients (in the GRAND nationwide inpatient registry, HoLEP/ThuLEP transfusion rates were roughly one-third of TURP's), and the procedure can often be performed without interrupting these medications. For patients on warfarin or on dual antiplatelet therapy for cardiac stents, this is a major practical advantage.
 - **Men who want one-and-done.** HoLEP retreatment rates are essentially zero at 5–7 years in long-term randomized cohorts.
 - **Men who have failed previous BPH procedures.** Patients whose UroLift, Rezum, GreenLight PVP, or even prior TURP did not deliver durable relief can be HoLEP candidates.
+- **Selected men who also have prostate cancer.** HoLEP can relieve benign obstruction while some men remain on active surveillance or before planned radiation. It does not treat the cancer, and the sequence must be coordinated with the cancer team. See [Can I have HoLEP if I have prostate cancer?](/holep-and-prostate-cancer).
 
 ## Who HoLEP is generally not for
 
 There are a few situations where HoLEP is not the right operation:
 
-- Men with active prostate cancer requiring oncologic treatment first (HoLEP can be discussed afterward).
+- Men whose cancer plan makes HoLEP unnecessary—particularly when radical prostatectomy is already the likely next step. Prior HoLEP does not prevent later cancer treatment, but sequencing matters.
 - Men with a known urethral stricture that would prevent passage of the resectoscope.
 - Men with a neurologic bladder where the obstruction is not the actual problem (HoLEP fixes the prostate; it doesn't fix bladder muscle dysfunction).
 - Men with very small prostates and primarily irritative symptoms — for whom alpha-blockers or behavioral modification may be more appropriate.
@@ -126,7 +127,7 @@ Honest framing: there are urinary problems that HoLEP does not solve.
 - **Overactive bladder** (urgency, frequency from bladder muscle hyperactivity, independent of obstruction) is a separate condition. HoLEP may improve it indirectly by removing obstruction, but it doesn't treat it directly.
 - **Stress urinary incontinence** unrelated to prostate surgery is not fixed by HoLEP.
 - **Erectile dysfunction** caused by other conditions (vascular, neurological, hormonal) is not improved by HoLEP — though longstanding LUTS often co-occur with ED, and treating the LUTS sometimes appears to improve the ED.
-- **Prostate cancer.** HoLEP is a treatment for benign prostatic enlargement. If cancer is identified incidentally on the HoLEP specimen, the management plan is discussed afterward.
+- **Prostate cancer.** HoLEP is a treatment for benign prostatic enlargement, not a cancer operation. It can sometimes fit alongside active surveillance or before radiation; see [HoLEP and prostate cancer](/holep-and-prostate-cancer) for the evidence and important limitations. If cancer is identified incidentally on the HoLEP specimen, the management plan is discussed afterward.
 
 Any honest BPH conversation includes what the operation can and cannot do.
 
@@ -155,6 +156,9 @@ HoLEP is an appropriate option after failed minimally invasive procedures. Many 
 
 **What about cancer detection?**
 Tissue removed during HoLEP goes to pathology. About 10% of HoLEP specimens contain incidentally identified prostate cancer.
+
+**Can I have HoLEP if I already have prostate cancer?**
+Often, yes—but the role depends on whether the cancer plan is active surveillance, radiation, or prostatectomy. HoLEP treats the benign obstruction, not the cancer. Read the detailed guide: [Can I have HoLEP if I have prostate cancer?](/holep-and-prostate-cancer).
 
 ## What to do next
 

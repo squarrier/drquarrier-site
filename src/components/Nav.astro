@@ -1,6 +1,8 @@
 ---
 import { SITE, MAIN_NAV } from '../consts';
 const path = Astro.url.pathname.replace(/\/$/, '') || '/';
+// Keep focused HoLEP sub-guides visibly anchored to the HoLEP parent page.
+const activePath = path === '/holep-and-prostate-cancer' ? '/holep' : path;
 ---
 <header class="site-header">
   <nav class="nav" aria-label="Primary">
@@ -11,7 +13,7 @@ const path = Astro.url.pathname.replace(/\/$/, '') || '/';
     <ul class="nav-links" id="primary-nav">
       {MAIN_NAV.map((item) => (
         <li>
-          <a href={item.href} aria-current={path === item.href ? 'page' : undefined}>{item.label}</a>
+          <a href={item.href} aria-current={activePath === item.href.replace(/\/$/, '') ? 'page' : undefined}>{item.label}</a>
         </li>
       ))}
       <li><a class="nav-cta" href={SITE.phoneHref}>Call {SITE.phone}</a></li>

@@ -22,7 +22,7 @@ git pull --ff-only origin main
 git switch -c feature/<short-description>
 
 npm.cmd ci
-npm.cmd run build
+npm.cmd run test:indexing
 
 git add <files>
 git commit -m "Describe the change"
@@ -67,7 +67,7 @@ Merging a reviewed Forgejo pull request into protected `main` starts the complet
 
 Cloudflare's production branch is `main`, the build variable `NODE_VERSION` is `22.12.0`, and non-production branch builds remain enabled for validation. Keep the Cloudflare build token narrowly scoped and managed by Cloudflare; never copy it into this repository.
 
-After each merge, confirm the same commit reached Forgejo, GitHub, and the Cloudflare build record. A successful build must report 13 generated pages and a completed deploy command.
+After each merge, confirm the same commit reached Forgejo, GitHub, and the Cloudflare build record. A successful build must report 14 generated pages (13 indexable routes plus the 404 page), a passing indexing contract, and a completed deploy command.
 
 Use a manual deployment only as a recovery procedure when the automatic build service is unavailable. Deploy from a clean, current `main` working tree:
 
@@ -78,7 +78,7 @@ git pull --ff-only origin main
 git status --short
 
 npm.cmd ci
-npm.cmd run build
+npm.cmd run test:indexing
 npx.cmd wrangler deploy
 ```
 
@@ -88,11 +88,13 @@ Manual Cloudflare authentication is local operator state. Never commit `.env` fi
 
 ## Post-deployment checks
 
-- Visit `https://drquarrier.com` and check all primary navigation links.
-- Test `/holep`, `/symptom-check`, `/faq`, and `/404` behavior.
-- Verify `/robots.txt`, `/ai.txt`, and `/sitemap.xml`.
+- Visit `https://drquarrier.com/` and check all primary navigation links.
+- Confirm `/holep`, `/symptom-check`, and `/faq` redirect once to their trailing-slash forms; the trailing-slash forms must return 200 with matching canonical tags. Confirm a nonexistent path such as `/indexing-check-not-found` returns 404; the directly addressable custom `/404/` asset must carry `noindex`.
+- Verify `/robots.txt`, `/ai.txt`, and `/sitemap.xml`; every sitemap URL must return 200 without redirecting.
 - Check the `*.workers.dev` URL first when diagnosing edge-cache differences.
 - If necessary, purge the affected URLs from Cloudflare's cache.
+
+After a URL-contract release, resubmit `https://drquarrier.com/sitemap.xml` in Google Search Console and start validation for the repaired redirect issue. Do not request indexing for `http://`, `www`, or bare non-trailing-slash duplicates; those should redirect or remain excluded in favor of the HTTPS apex canonical URL.
 
 ## Contact form security
 
