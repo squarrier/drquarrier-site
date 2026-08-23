@@ -5,9 +5,12 @@
 ## Current architecture
 
 - Forgejo on Beast is the primary Git service.
-- GitHub is a downstream mirror of `main`.
-- The live site is a Cloudflare Worker named `drquarrier-site` serving `./dist`.
-- Repository pushes do not currently publish the Worker; deployment remains an explicit build and `wrangler deploy` step.
+- Forgejo push-mirrors only protected `main` to GitHub; working branches remain private in Forgejo.
+- GitHub `main` is the Cloudflare Workers Builds source.
+- A reviewed merge to Forgejo `main` is the normal production trigger: mirror to GitHub, build `./dist`, then `wrangler deploy`.
+- The live site is the Cloudflare Worker `drquarrier-site`, exposed at `drquarrier.com` and its `*.workers.dev` address.
+
+Manual `wrangler deploy` is recovery-only. The authoritative workflow and verification steps are in `DEPLOY.md`.
 
 ## Retired workflow
 
@@ -26,4 +29,5 @@ Do not restore commands that copy from or build inside the retired OneDrive tree
 ## Cloudflare behavior
 
 - The `*.workers.dev` URL is the quickest way to distinguish a new Worker deployment from stale edge cache on `drquarrier.com`.
+- Cloudflare Workers Builds uses Node `22.12.0`, runs `npm run build`, and then runs `npx wrangler deploy`.
 - Cloudflare AI Crawl Control can override repository crawler files. Keep `public/robots.txt` and `public/ai.txt` permissive unless the site policy intentionally changes.
